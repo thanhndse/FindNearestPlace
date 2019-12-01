@@ -44,8 +44,8 @@ public class CrawlServlet extends HttpServlet {
             System.out.println("Crawling");
             ServletContext context = request.getServletContext();
             String realPath = context.getRealPath("/");
-            CrawlService crawlService = new CrawlService(hibernateSession);
-            crawlService.crawlPasgoFromFile(realPath);
+            CrawlService crawlService = new CrawlService(hibernateSession, realPath);
+            crawlService.crawlPasgo(true);
             System.out.println("End crawled");
         } finally {
             out.close();

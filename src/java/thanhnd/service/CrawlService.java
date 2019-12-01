@@ -7,6 +7,7 @@ package thanhnd.service;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -23,6 +24,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import javax.xml.XMLConstants;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.stream.XMLStreamConstants;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
@@ -32,6 +36,8 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 import org.hibernate.Session;
+import org.xml.sax.SAXException;
+import org.xml.sax.helpers.DefaultHandler;
 import thanhnd.constant.FileConstant;
 import thanhnd.dto.PlaceCrawlDto;
 import thanhnd.entity.Category;
@@ -51,30 +57,50 @@ public class CrawlService {
     private final CategoryRepository categoryRepository;
     private final PlaceRepository placeRepository;
     private final String TAG = "CrawlService: ";
+    private final String realPath;
 
-    public CrawlService(Session hibernateSession) {
+    public CrawlService(Session hibernateSession, String realPath) {
         this.session = hibernateSession;
         this.categoryRepository = new CategoryRepository(session);
         this.placeRepository = new PlaceRepository(session);
+        this.realPath = realPath;
     }
 
-    public void crawlPasgo(String realPath) {
+    public void crawlPasgo(boolean fromFile) {
         ByteArrayOutputStream os = null;
         FileOutputStream fo = null;
+        List<PlaceCrawlDto> placelDtoList;
+        List<PlaceCrawlDto> placelDtoListValidated;
         try {
-            // crawl from web
-            os = TrAXUtils.transform(realPath + FileConstant.PASGO_INPUT_XML, realPath + FileConstant.PASGO_MAIN_XSL);
+            if (fromFile) {
+                // get xml from file
+                FileInputStream fis = new FileInputStream(realPath + FileConstant.PASGO_OUTPUT_XML);
 
-            // save to file to test
-            fo = new FileOutputStream(realPath + FileConstant.PASGO_OUTPUT_XML);
-            fo.write(os.toByteArray());
-            fo.flush();
+                // parse by stAX
+                placelDtoList = parseDataByStAX(fis);
+            } else {
+                // crawl from web
+                os = TrAXUtils.transform(realPath + FileConstant.PASGO_INPUT_XML, realPath + FileConstant.PASGO_MAIN_XSL);
 
-            // parse by stAX
-            HashMap<String, PlaceCrawlDto> mapPlaces = parseDataByStAX(new ByteArrayInputStream(os.toByteArray()));
+                // save to file to test
+                fo = new FileOutputStream(realPath + FileConstant.PASGO_OUTPUT_XML);
+                fo.write(os.toByteArray());
+                fo.flush();
+
+                // parse by stAX
+                placelDtoList = parseDataByStAX(new ByteArrayInputStream(os.toByteArray()));
+            }
+
+            // validate 
+            placelDtoListValidated = new ArrayList<>();
+            for (PlaceCrawlDto placeCrawlDto : placelDtoList) {
+                if (isValid(placeCrawlDto)) {
+                    placelDtoListValidated.add(placeCrawlDto);
+                }
+            }
 
             // save to db
-            this.saveToDb(new ArrayList<>(mapPlaces.values()));
+            this.saveToDb(placelDtoList);
 
         } catch (Exception ex) {
             Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
@@ -94,55 +120,6 @@ public class CrawlService {
                 }
             }
         }
-    }
-
-    public void crawlPasgoFromFile(String realPath) {
-        ByteArrayOutputStream os = null;
-        FileOutputStream fo = null;
-        try {
-            // get xml from file
-            FileInputStream fis = new FileInputStream(realPath + FileConstant.PASGO_OUTPUT_XML);
-
-            // Stax
-            HashMap<String, PlaceCrawlDto> mapPlaces = parseDataByStAX(fis);
-
-            // save to db
-            List<PlaceCrawlDto> placeCrawlDtos = new ArrayList<>(mapPlaces.values());
-            this.saveToDb(placeCrawlDtos);
-
-        } catch (Exception ex) {
-            Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
-        } finally {
-            if (fo != null) {
-                try {
-                    fo.close();
-                } catch (IOException ex) {
-                    Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
-                }
-            }
-            if (os != null) {
-                try {
-                    os.close();
-                } catch (IOException ex) {
-                    Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
-                }
-            }
-        }
-    }
-
-    private boolean validateByXsd(byte[] xmlByteArray, String xsdFilePath) {
-        StreamSource xmlSource = new StreamSource(new ByteArrayInputStream(xmlByteArray));
-        StreamSource xsd = new StreamSource(xsdFilePath); // read schema
-        try {
-            SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI); // create schema factory
-            Schema schema = sf.newSchema(xsd);
-            Validator validator = schema.newValidator();
-            validator.validate(xmlSource);
-            return true;
-        } catch (Exception ex) {
-            Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
-        }
-        return false;
     }
 
     public void saveToDb(List<PlaceCrawlDto> placeCrawlDtos) {
@@ -175,9 +152,9 @@ public class CrawlService {
         return placeRepository.isPlaceExistedByName(name);
     }
 
-    private HashMap<String, PlaceCrawlDto> parseDataByStAX(InputStream is) throws XMLStreamException {
+    private List<PlaceCrawlDto> parseDataByStAX(InputStream is) throws XMLStreamException {
         PlaceCrawlDto placeCrawlDto = new PlaceCrawlDto();
-        HashMap<String, PlaceCrawlDto> result = new HashMap<>();
+        HashMap<String, PlaceCrawlDto> mapPlaces = new HashMap<>();
         XMLStreamReader reader = StaxUtils.parseFileToStAXCursor(is);
         while (reader.hasNext()) {
             int currentCursor = reader.next();
@@ -190,7 +167,7 @@ public class CrawlService {
                     String fullAddress = StaxUtils.getTextContentStAXCursor("fullAddress", reader).orElse("").trim();
                     String image = StaxUtils.getTextContentStAXCursor("image", reader).orElse("").trim();
                     placeCrawlDto = new PlaceCrawlDto(name, image, fullAddress);
-                    
+
                     //convert categoriesStringArray to Set and add to placeCrawlDto object 
                     if (categoriesString != null) {
                         String[] categoriesStringArray = categoriesString.split(",");
@@ -205,17 +182,39 @@ public class CrawlService {
                 if (reader.getLocalName().trim().equals("place")) {
                     // add or update object placeCrawlDto to Map
                     String placeName = placeCrawlDto.getName();
-                    if (result.containsKey(placeCrawlDto.getName())) {
-                        Set<String> currentCategoriesString = result.get(placeName).getCategoriesStringSet();
+                    if (mapPlaces.containsKey(placeCrawlDto.getName())) {
+                        Set<String> currentCategoriesString = mapPlaces.get(placeName).getCategoriesStringSet();
                         Set<String> newCategoriesString = placeCrawlDto.getCategoriesStringSet();
                         currentCategoriesString.addAll(newCategoriesString);
                     } else {
-                        result.put(placeName, placeCrawlDto);
+                        mapPlaces.put(placeName, placeCrawlDto);
                         System.out.println("Add new place: " + placeName);
                     }
                 }
             }
         }
-        return result;
+        return new ArrayList<>(mapPlaces.values());
+    }
+
+    private boolean isValid(PlaceCrawlDto placeCrawlDto) throws JAXBException {
+        try {
+            SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+            Schema schema = schemaFactory.newSchema(new File(realPath + FileConstant.XSD_FILE));
+
+            JAXBContext jAXBContext = JAXBContext.newInstance(PlaceCrawlDto.class);
+            Marshaller marshaller = jAXBContext.createMarshaller();
+            marshaller.setSchema(schema);
+            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
+            marshaller.marshal(placeCrawlDto, new DefaultHandler());
+            return true;
+        } catch (JAXBException ex) {
+            Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Failed " + placeCrawlDto.getName());
+        } catch (SAXException ex) {
+            Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Failed " + placeCrawlDto.getName());
+        }
+        return false;
     }
 }

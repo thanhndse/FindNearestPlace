@@ -10,11 +10,21 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  *
  * @author thanh
  */
+@XmlRootElement  
+@XmlType(propOrder = {
+    "name",
+    "image",
+    "fullAddress",
+    "categoriesStringSet"
+})
 public class PlaceCrawlDto implements Serializable {
     private String name;
     private String image;
@@ -31,7 +41,7 @@ public class PlaceCrawlDto implements Serializable {
     }
     
     
-
+    @XmlElement
     public String getName() {
         return name;
     }
@@ -40,6 +50,7 @@ public class PlaceCrawlDto implements Serializable {
         this.name = name;
     }
 
+    @XmlElement
     public String getImage() {
         return image;
     }
@@ -48,6 +59,7 @@ public class PlaceCrawlDto implements Serializable {
         this.image = image;
     }
     
+    @XmlElement
     public String getFullAddress() {
         return fullAddress;
     }
@@ -56,6 +68,7 @@ public class PlaceCrawlDto implements Serializable {
         this.fullAddress = fullAddress;
     }
 
+    @XmlElement
     public Set<String> getCategoriesStringSet() {
         return categoriesStringSet;
     }
