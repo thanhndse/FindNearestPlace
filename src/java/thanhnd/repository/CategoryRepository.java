@@ -6,6 +6,7 @@
 package thanhnd.repository;
 
 import java.io.Serializable;
+import java.util.Optional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import org.hibernate.Session;
@@ -19,21 +20,18 @@ import thanhnd.utils.HibernateUtil;
 public class CategoryRepository implements Serializable{
     
     private final Session session;
-
-    public CategoryRepository() {
-       session = HibernateUtil.getSessionFactory().getCurrentSession();
+    
+    public CategoryRepository(Session session) {
+        this.session = session;
     }
     
-    public void saveCategory(Category category){
-        try{
-            session.getTransaction().begin();
-            session.persist(category);
-            session.getTransaction().commit();
-        }
-        catch(Exception ex){
-            if (session.getTransaction().isActive()){
-                session.getTransaction().rollback();
-            }
-        }   
+    public Optional<Category> getCategoryByName(String name){
+        session.beginTransaction();
+        Optional<Category> optionalCategory = session.createQuery("from Category c where c.name = :name")
+                .setParameter("name", name)
+                .getResultStream()
+                .findFirst();
+        session.getTransaction().commit();
+        return optionalCategory;
     }
 }

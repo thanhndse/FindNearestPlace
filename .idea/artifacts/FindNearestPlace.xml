@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="FindNearestPlace">
-    <output-path>$PROJECT_DIR$/out/production/FindNearestPlace</output-path>
-    <root id="archive" name="FindNearestPlace.war" />
-  </artifact>
-</component>

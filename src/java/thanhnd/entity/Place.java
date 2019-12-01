@@ -6,16 +6,17 @@
 package thanhnd.entity;
 
 import java.io.Serializable;
-import javax.persistence.Basic;
-import javax.persistence.Column;
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 /**
@@ -24,43 +25,26 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Place")
-@NamedQueries({
-    @NamedQuery(name = "Place.findAll", query = "SELECT p FROM Place p")})
 public class Place implements Serializable {
-
-    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "id")
     private Integer id;
-    @Column(name = "name")
     private String name;
-    @Column(name = "image")
     private String image;
-    @Column(name = "city")
     private String city;
-    @Column(name = "district")
     private String district;
-    @Column(name = "street")
     private String street;
-    @Column(name = "fullAddress")
     private String fullAddress;
-    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
-    @Column(name = "latitude")
-    private Double latitude;
-    @Column(name = "longitude")
-    private Double longitude;
-    @JoinColumn(name = "categoryId", referencedColumnName = "id")
-    @ManyToOne
-    private Category categoryId;
-
-    public Place() {
-    }
-
-    public Place(Integer id) {
-        this.id = id;
-    }
+    private double latitude;
+    private double longitude;
+    
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+            name = "PlaceCategory",
+            joinColumns = {@JoinColumn(name = "placeId")},
+            inverseJoinColumns = {@JoinColumn(name = "categoryId")}
+    )
+    private List<Category> categories = new ArrayList<>();
 
     public Integer getId() {
         return id;
@@ -118,53 +102,35 @@ public class Place implements Serializable {
         this.fullAddress = fullAddress;
     }
 
-    public Double getLatitude() {
+    public double getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Double latitude) {
+    public void setLatitude(double latitude) {
         this.latitude = latitude;
     }
 
-    public Double getLongitude() {
+    public double getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Double longitude) {
+    public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
-
-    public Category getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(Category categoryId) {
-        this.categoryId = categoryId;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Place)) {
-            return false;
-        }
-        Place other = (Place) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "thanhnd.entity.Place[ id=" + id + " ]";
+    
+    public void addCategory(Category category){
+        categories.add(category);
+        category.getPlaces().add(this);
     }
     
+    public void addManyCategories(List<Category> newCategories){
+        newCategories.forEach(newCategory -> {
+            this.categories.add(newCategory);
+            newCategory.getPlaces().add(this);
+        });
+    }
+
+    public List<Category> getCategories() {
+        return categories;
+    }
 }

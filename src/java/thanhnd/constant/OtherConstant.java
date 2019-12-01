@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package thanhnd.service;
-
-import thanhnd.repository.CategoryRepository;
-import thanhnd.repository.PlaceRepository;
+package thanhnd.constant;
 
 /**
  *
  * @author thanh
  */
-public class PlaceService {
-
+public class OtherConstant {
+    
 }

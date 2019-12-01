@@ -1,0 +1,326 @@
+<places xmlns="http://thanhnd.xml/pasgo.vn/">
+    <place>
+        <name>Những Người Bạn - Phan Văn Trị </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>14 Phan Văn Trị, P. 7, Q. Gò Vấp </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/nha-hang-nhung-nguoi-ban-phan-van-tri-300-109846321088.jpg </image>
+    </place>
+    <place>
+        <name>Pasta Fresca Avenue – Phan Xích Long </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 227 Phan Xích Long (số cũ 114), P. 2, Q. Phú Nhuận </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/pasta-fresca-avenue-phan-xich-long-300-100299553339.jpg </image>
+    </place>
+    <place>
+        <name>Chang Kang Kung – Hấp Thủy Nhiệt Hong Kong - Cộng Hòa </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 77 Cộng Hòa, P. 4, Q.Tân Bình </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/chang-kang-kung-hap-thuy-nhiet-hong-kong-cong-hoa-300-45876642786.jpg </image>
+    </place>
+    <place>
+        <name>Lẩu Nấm Ashima - Nguyễn Trãi </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>331A Nguyễn Trãi, P. Nguyễn Cư Trinh, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/nha-hang-lau-nam-ashima-nguyen-trai-300-26767662333.jpg </image>
+    </place>
+    <place>
+        <name>TukTuk Thai Bistro - Lê Thánh Tôn </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>17/11 Lê Thánh Tôn, P. Bến Nghé, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/tuk-tuk-thai-bistro-le-thanh-ton-300-13096351125.jpg </image>
+    </place>
+    <place>
+        <name>Thế Giới Hải Sản – Pasteur </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>244 Pasteur, P. 6, Q. 3 </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/the-gioi-hai-san-244-pasteur-300-12106751261.jpg </image>
+    </place>
+    <place>
+        <name>Gyu Shige Ngưu Phồn - Tôn Thất Thiệp </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 21 – 23 – 25 - 27 Tôn Thất Thiệp, P. Bến Nghé, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/nha-hang-gyu-shige-nguu-phon-ton-that-thiep-300-47237972807.jpg </image>
+    </place>
+    <place>
+        <name>Chang Kang Kung –  Hấp Thủy Nhiệt Hong Kong - Phan Đăng Lưu </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 128C Phan Đăng Lưu, P. 03, Q. Phú Nhuận </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/chang-kang-kung-hap-thuy-nhiet-hong-kong-phan-dang-luu-300-45873702785.jpg </image>
+    </place>
+    <place>
+        <name>Hotpot Story – Lê Văn Sỹ </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 409 Lê Văn Sỹ, P. 12, Q. 3 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Gyu Shige Ngưu Phồn - Saigon Centre </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Lầu 5, L5-16, Zone 3, Saigon Centre, Số 65 Lê Lợi, P. Bến Nghé, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Food House – Nguyễn Kiệm </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>800 Nguyễn Kiệm, P. 3, Q. Gò Vấp </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Food House - Nam Kỳ Khởi Nghĩa </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>171 Nam Kỳ Khởi Nghĩa, P. 6, Q. 3 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Chang Kang Kung – Hấp Thủy Nhiệt Hong Kong - Kinh Dương Vương </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 99 Kinh Dương Vương, P. 12, Q. 6 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Lẩu Nấm Ashima - Nguyễn Đình Chiểu </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>35A Nguyễn Đình Chiểu, P. Đa Kao, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Gyu Shige Ngưu Phồn - Nguyễn Thị Minh Khai </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 183A Nguyễn Thị Minh Khai, P. Phạm Ngũ Lão, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Lẩu Nấm Ashima - Xuân Thủy </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 93 Xuân Thủy, P. Thảo Điền, Q. 2 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Hotpot Story – Saigon Centre </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Saigon Center, Tầng 5, L5-02, Số 65 Lê Lợi, P. Bến Nghé, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Hotpot Story - Pearl Plaza </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>L4-07, Tầng 4, TTTM Pearl Plaza, số 561A Điện Biên Phủ, P. 25, Q. Bình Thạnh </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Food House - Phan Xích Long </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>135 Phan Xích Long, P. 7, Q. Phú Nhuận </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Hotpot Story – Aeon Mall Bình Tân </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Gian hàng T6 - Tầng 3, TTTM Aeon Mall Bình Tân, Số 01 đường số 17A, khu phố 11, P. Bình Trị Đông B, Q. Bình Tân </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name> </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress> </fullAddress>
+        <image> </image>
+    </place>
+    <place>
+        <name>Stix - Nguyễn Đình Chiểu </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>174A Nguyễn Đình Chiểu, P. 6, Q. 3 </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/nha-hang-stix-nguyen-dinh-chieu-300-12169491426.jpg </image>
+    </place>
+    <place>
+        <name>Hoàng Yến Buffet - Pearl Plaza </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Tầng 4, Pearl Plaza, 561A Điện Biên Phủ, P. 25, Q. Bình Thạnh </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/hoang-yen-buffet-pearl-plaza-300-83813402774.jpg </image>
+    </place>
+    <place>
+        <name>Hoàng Yến Buffet - Cao Thắng Mall </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Cao Thắng Mall, Lầu 03, 19 Cao Thắng, P. 2, Q. 3 </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/buffet-hoang-yen-cao-thang-mall-300-83813371480.jpg </image>
+    </place>
+    <place>
+        <name>Hoàng Yến Buffet - Melinh Point </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Melinh Point, Lầu 1, Số 2 Ngô Đức Kế, P. Bến Nghé, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/hoang-yen-buffet-melinh-point-300-83813341436.jpg </image>
+    </place>
+    <place>
+        <name>Ba Gác - Nướng &amp; Bia - Út Tịch </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 92 Út Tịch, P. 4, Q. Tân Bình </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/ba-gac-nuong-and-bia-ut-tich-300-106070593549.jpg </image>
+    </place>
+    <place>
+        <name>Food House - Nguyễn Tri Phương </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 230 Nguyễn Tri Phương, P. 04, Q. 10 </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/food-house-nguyen-tri-phuong-300-123471912127.jpg </image>
+    </place>
+    <place>
+        <name>King BBQ Buffet - Nguyễn Ảnh Thủ </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>10B/A Khu phố 01 đường Nguyễn Ảnh Thủ, P. Trung Mỹ Tây, Q. 12 </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/king-bbq-buffet-nguyen-anh-thu-300-31108892486.jpg </image>
+    </place>
+    <place>
+        <name>Tasaki BBQ - Aeon Mall Bình Tân </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Aeon Mall Bình Tân, Tầng 3, Số 532A Đường Kinh Dương Vương, P. Bình Trị Đông B, Q. Bình Tân </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/nha-hang-tasaki-bbq-aeon-mall-binh-tan-300-32952152539.jpg </image>
+    </place>
+    <place>
+        <name>Hotpot Story – Lotte Mart Nam Sài Gòn </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Lotte Mart Nam Sài Gòn, Tầng 1, 1F1-5, Số 469 Nguyễn Hữu Thọ, P. Tân Hưng, Q. 7 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Hoàng Yến Buffet - The Garden Mall </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Zone C, Tầng 3, The Garden Mall, Số 190 Hồng Bàng, P. 12 , Q. 5 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Ba Gác – Nướng &amp; Bia – Song Hành </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 181/1 Song Hành, X. Trung Chánh, H. Hóc Môn </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Tasaki BBQ - Vincom Quang Trung </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Gian hàng B1-07+08, Tầng B1 , TTTM Vincom Quang Trung, 190 Quang Trung , P. 10,  Q. Gò Vấp </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Hotpot Story – Quang Trung </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 16 Quang Trung, P. 10, Q. Gò Vấp </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Hoàng Yến Buffet – Vạn Hạnh Mall </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Vạn Hạnh Mall, Tầng 5 Gian hàng Số 15, Số 11 Sư Vạn Hạnh, P. 12, Q. 10 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Ba Gác - Nướng &amp; Bia - Trường Sơn </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số CC26-CC27 Trường Sơn, P. 15, Q. 10 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Hoàng Yến Buffet - Vincom Center B </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Vincom Center B, 72 Lê Thánh Tôn, P. Bến Nghé, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Tasaki BBQ - Vạn Hạnh Mall </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Vạn Hạnh Mall, Tầng 6, Số 11 đường Sư Vạn Hạnh, P. 12, Q. 10 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Hotpot Story - Vạn Hạnh Mall </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Tầng 6, TTTM Vạn Hạnh Mall, Số 11 đường Sư Vạn Hạnh, P. 12, Q. 10 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Hoàng Yến Buffet Premier - Bitexco </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Tòa nhà Bitexco, Icon 68, Lầu 3, Số 2 Hải Triều, P. Bến Nghé, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Ba Gác – Nướng &amp; Bia – Lê Quý Đôn </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 31 Lê Quý Đôn, P.7, Q. 3 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name> </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress> </fullAddress>
+        <image> </image>
+    </place>
+    <place>
+        <name>Tasaki BBQ - Lê Văn Sỹ </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 409A Lê Văn Sỹ, P. 12, Q. 3 </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/nha-hang-tasaki-bbq-le-van-sy-300-32955712540.jpg </image>
+    </place>
+    <place>
+        <name>Hotpot Story - Cao Thắng </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>58C1 Cao Thắng, P. 5, Q. 3 </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/hotpot-story-cao-thang-300-31666181025.jpg </image>
+    </place>
+    <place>
+        <name>Karaoke Kingdom – Trần Quang Khải </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>218 - 220 Trần Quang Khải, P. Tân Định, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Upload/anh-diem-den/kingdom-karaoke-tran-quang-khai-300-12534161593.jpg </image>
+    </place>
+    <place>
+        <name>Karaoke Kingdom - Phạm Viết Chánh </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>67 - 69 Phạm Viết Chánh, P. Nguyễn Cư Trinh, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>The LOG - GEM Center </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>GEM Center, Rooftop, 8 Nguyễn Bỉnh Khiêm, P. Đa Kao, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Chay Bếp Xanh An Duyên - Nguyễn Tri Phương </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>Số 10 Nguyễn Tri Phương, P. 6, Q. 5 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Mandarine -  Ngô Văn Năm </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>11A Ngô Văn Năm, P. Bến Nghé, Q. 1 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Én Restaurant - Điện Biên Phủ </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>308-308C Điện Biên Phủ, Robot Tower, Tầng G, P. 4, Q. 3 </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Dìn Ký – Cộng Hòa </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>142/18 Cộng Hòa, P. 4, Q. Tân Bình </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Lẩu băng chuyền Osaka.1 - Phổ Quang </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>102 Phổ Quang, P. 2, Q. Tân Bình </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Lẩu băng chuyền Osaka.1 – Luỹ Bán Bích </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>455 Lũy Bán Bích, P. Hiệp Tân, Q. Tân Phú </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+    <place>
+        <name>Quán Cua Hoa </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress>74/14 Trương Quốc Dung, P. 10, Q. Phú Nhuận </fullAddress>
+        <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
+    </place>
+</places>

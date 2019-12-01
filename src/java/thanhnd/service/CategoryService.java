@@ -12,10 +12,5 @@ import thanhnd.repository.CategoryRepository;
  * @author thanh
  */
 public class CategoryService {
-    private final CategoryRepository categoryRepository;
-
-    public CategoryService() {
-        this.categoryRepository = new CategoryRepository();
-    }
     
 }

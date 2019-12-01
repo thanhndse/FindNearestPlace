@@ -6,16 +6,15 @@
 package thanhnd.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 /**
@@ -24,28 +23,24 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Category")
-@NamedQueries({
-    @NamedQuery(name = "Category.findAll", query = "SELECT c FROM Category c")})
 public class Category implements Serializable {
 
-    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "id")
     private Integer id;
-    @Column(name = "name")
     private String name;
-    @OneToMany(mappedBy = "categoryId")
-    private List<Place> placeList;
+    
+    @ManyToMany(mappedBy = "categories", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    private List<Place> places = new ArrayList<>();;
 
     public Category() {
     }
 
-    public Category(Integer id) {
-        this.id = id;
+    public Category(String name) {
+        this.name = name;
     }
 
+    
     public Integer getId() {
         return id;
     }
@@ -62,37 +57,11 @@ public class Category implements Serializable {
         this.name = name;
     }
 
-    public List<Place> getPlaceList() {
-        return placeList;
+    public List<Place> getPlaces() {
+        return places;
     }
 
-    public void setPlaceList(List<Place> placeList) {
-        this.placeList = placeList;
+    public void setPlaces(List<Place> places) {
+        this.places = places;
     }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Category)) {
-            return false;
-        }
-        Category other = (Category) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "thanhnd.entity.Category[ id=" + id + " ]";
-    }
-    
 }

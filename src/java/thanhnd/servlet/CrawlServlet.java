@@ -5,25 +5,26 @@
  */
 package thanhnd.servlet;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import thanhnd.entity.User;
-import thanhnd.service.UserService;
+import javax.xml.transform.TransformerException;
+import org.hibernate.Session;
+import thanhnd.service.CrawlService;
+import thanhnd.utils.HibernateUtil;
 
 /**
  *
  * @author thanh
  */
-public class LoginServlet extends HttpServlet {
-
-    private final String invaidPage = "invalid.html";
-    private final String indexPage = "index.jsp";
-    private final String dashboardPage = "dashboard.jsp";
+public class CrawlServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,26 +39,15 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        UserService userService = new UserService();
-        HttpSession session = request.getSession();
-        String url = invaidPage;
         try {
-            User user = userService.findByUsernameAndPassword(username, password);
-            if (user != null) {
-                if (user.getRole().equals("user")) {
-                    session.setAttribute("user", user);
-                    url = indexPage;
-                }
-                else if (user.getRole().equals("admin")) {
-                    session.setAttribute("user", user);
-                    url = dashboardPage;
-                }
-
-            }
+            Session hibernateSession = HibernateUtil.getSessionFactory().openSession();
+            System.out.println("Crawling");
+            ServletContext context = request.getServletContext();
+            String realPath = context.getRealPath("/");
+            CrawlService crawlService = new CrawlService(hibernateSession);
+            crawlService.crawlPasgoFromFile(realPath);
+            System.out.println("End crawled");
         } finally {
-            response.sendRedirect(url);
             out.close();
         }
     }
