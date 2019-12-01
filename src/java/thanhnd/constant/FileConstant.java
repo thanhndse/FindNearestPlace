@@ -22,5 +22,5 @@ public class FileConstant {
     public static final String VIETNAMM_OUTPUT_XML = "WEB-INF/vietnammm/vietnammm-output.xml";
     
     //xsd
-    public static final String XSD_FILE = "WEB-INF/place.xsd";
+    public static final String XSD_FILE = "WEB-INF/xsd/place.xsd";
 }

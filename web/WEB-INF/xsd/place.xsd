@@ -10,14 +10,8 @@ and open the template in the editor.
            xmlns="http://thanhnd.xml/pasgo.vn/"
            xmlns:xs="http://www.w3.org/2001/XMLSchema"
            elementFormDefault="qualified">
-    <xs:element name="places">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="place" type="Place" minOccurs="0" maxOccurs="unbounded"></xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-    <xs:complexType name="Place">
+    <xs:element name="placeCrawlDto" type="PlaceCrawlDto"/>
+    <xs:complexType name="PlaceCrawlDto">
         <xs:sequence>
             <xs:element name="name">
                 <xs:simpleType>
@@ -26,7 +20,7 @@ and open the template in the editor.
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="categoriesString">
+            <xs:element name="image">
                 <xs:simpleType>
                     <xs:restriction base="xs:normalizedString">
                         <xs:minLength value="1"/>
@@ -40,7 +34,7 @@ and open the template in the editor.
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="image">
+            <xs:element name="categoriesStringSet" maxOccurs="unbounded" >
                 <xs:simpleType>
                     <xs:restriction base="xs:normalizedString">
                         <xs:minLength value="1"/>
