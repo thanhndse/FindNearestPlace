@@ -96,6 +96,12 @@
         <image>https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png </image>
     </place>
     <place>
+        <name> </name>
+        <categoriesString>Nhà hàng, Cơm quê </categoriesString>
+        <fullAddress> </fullAddress>
+        <image> </image>
+    </place>
+    <place>
         <name>Hotpot Story – Saigon Centre </name>
         <categoriesString>Nhà hàng, Cơm quê </categoriesString>
         <fullAddress>Saigon Center, Tầng 5, L5-02, Số 65 Lê Lợi, P. Bến Nghé, Q. 1 </fullAddress>

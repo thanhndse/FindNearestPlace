@@ -28,7 +28,7 @@ public class UltimateURIResolver implements URIResolver {
 
     @Override
     public Source resolve(String href, String base) throws TransformerException {
-        if (href != null && href.indexOf("https://pasgo.vn/") == 0) {
+        if (href != null && (href.indexOf("https://pasgo.vn") == 0|| href.indexOf("https://www.vietnammm.com") == 0)) {
             String content = HttpUtils.getHttpContent(href);
             XmlSyntaxChecker checker = new XmlSyntaxChecker();
             content = checker.refineHtml(content);

@@ -1,0 +1,1122 @@
+<body data-spy="scroll">
+    <header>
+        <nav id="navfixtop">
+            <div class="container">
+                <ul id="menu">
+                    <li>
+                        <a href="https://pasgo.vn/ho-chi-minh">
+                            <span class="pasgo-icondesktop-logo"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://pasgo.vn/ho-chi-minh/bo-suu-tap">Bộ sưu tập</a>
+                    </li>
+                    <li>
+                        <a href="https://pasgo.vn/ho-chi-minh/an-uong">Ăn uống<span class="pasgo-icondesktop-menudown"></span></a>
+                        <div class="pasgo-dropdown-menu">
+                            <div class="container">
+                                <div id="home-menu">
+                                    <span class="text-loading">Đang tải...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://pasgo.vn/ho-chi-minh/nha-hang-uy-tin">Nhà hàng uy tín</a>
+                    </li>
+                    <li>
+                        <a href="https://pasgo.vn/ho-chi-minh/giam-gia-nhieu-nhat">Ưu đãi hot</a>
+                    </li>
+                    <li>
+                        <a href="https://pasgo.vn/ho-chi-minh/diem-den-moi-nhat">Mới nhất</a>
+                    </li>
+                    <li>
+                        <a href="https://pasgo.vn/ho-chi-minh/kham-pha">Khám phá<span class="pasgo-icondesktop-menudown"></span></a>
+                        <div class="pasgo-dropdown-menu">
+                            <div class="container">
+                                <div id="home-menu-khampha">
+                                    <span class="text-loading">Đang tải...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://pasgo.vn/blog/ho-chi-minh">Blog PasGo<span class="pasgo-icondesktop-menudown"></span></a>
+                        <div class="pasgo-dropdown-menu">
+                            <div class="container">
+                                <div id="home-menu-blog">
+                                    <span class="text-loading">Đang tải...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://pasgo.vn/tin-tuc">Tin tức<span class="pasgo-icondesktop-menudown"></span></a>
+                        <div class="pasgo-dropdown-menu">
+                            <div class="container">
+                                <div id="home-menu-tin-tuc">
+                                    <span class="text-loading">Đang tải...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://pasgo.vn/ho-chi-minh/video">Video PasGo<span class="pasgo-icondesktop-menudown"></span></a>
+                        <div class="pasgo-dropdown-menu">
+                            <div class="container">
+                                <div id="home-menu-video">
+                                    <span class="text-loading">Đang tải...</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="menu-right">
+                    <li>
+                    </li>
+                    <li>
+                        <a href="https://pasgo.vn/dang-nhap?returnUrl=/ho-chi-minh/nha-hang/lau-27">
+                            <span class="glyphicon glyphicon-user"></span>Tài khoản</a>
+                        <ul class="login">
+                            <li>
+                                <a href="https://pasgo.vn/dang-nhap?returnUrl=/ho-chi-minh/nha-hang/lau-27" class="btn">Đăng nhập</a>
+                            </li>
+                            <li>
+                                <a href="https://pasgo.vn/dang-ky?returnUrl=/ho-chi-minh/nha-hang/lau-27" class="link">Thành viên mới?</a>
+                            </li>
+                            <li>
+                                <a href="https://pasgo.vn/dang-ky?returnUrl=/ho-chi-minh/nha-hang/lau-27" class="btn">Đăng ký</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="search-fixed">
+                    <form method="get" action="/tim-kiem" class="navbar-form navbar-right bar-bottom">
+                        <div class="input-group">
+                            <input autocomplete="off" name="search" placeholder="Tìm: Buffet, Lẩu, Nướng..." type="text" class="form-control"/>
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-default p-normal">
+                                    <span aria-hidden="true" class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <section class="pasgo-search">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 selectedtinh">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="pasgo-icondesktop-province"></span>
+                                <form method="post" action="/Base/ChangeProvince">
+                                    <select name="provinceId" onchange="this.form.submit();" id="provinceId" class="form-control first">
+                                        <option value="1">Hà Nội</option>
+                                        <option value="2" selected="true">TP.HCM</option>
+                                        <option value="4">Đà Nẵng</option>
+                                        <option value="5">Khánh Hòa</option>
+                                    </select>
+                                </form>
+                                <span class="pasgo-icondesktop-menudown"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <form method="get" action="/tim-kiem" class="navbar-form navbar-right bar-bottom">
+                            <div class="input-group">
+                                <input autocomplete="off" onclick="searchWebsite();" name="search" id="textSearch" placeholder="Buffet, Lẩu &amp; Nướng, Hải sản..." type="text" class="form-control" oninput="searchWebsite();"/>
+                                <img src="https://pasgo.vn/Assets/Images/gif/search-loading.gif" alt="tìm kiếm nhà hàng, bộ sưu tập" class="img-search"/>
+                                <span class="input-group-addon">
+                                    <select onchange="typeSearchSelected(this)" id="slTypeSearch" class="form-control selected">
+                                        <option value="1">Nhà hàng</option>
+                                        <option value="2">Khám phá</option>
+                                        <option value="3">Video</option>
+                                    </select>
+                                    <span class="pasgo-icondesktop-menudown"></span>
+                                </span>
+                                <span class="input-group-addon frm-search">
+                                    <button type="submit" class="btn">
+                                        <span class="pasgo-icondesktop-search"></span>Tìm kiếm</button>
+                                </span>
+                                <div id="result">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="pasgo-phone">
+                            <span class="pasgo-icondesktop-hotline"></span>1900 6005
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <div class="wapper-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul itemscope="true" itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
+                        <li itemscope="true" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+                            <a itemprop="item" href="https://pasgo.vn/ho-chi-minh">
+                                <span itemprop="name">Trang chủ</span>
+                            </a>
+                            <span>></span>
+                            <meta itemprop="position" content="1"/>
+                        </li>
+                        <li itemscope="true" itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+                            <a itemprop="name" href="https://pasgo.vn/ho-chi-minh/an-uong">Ăn uống</a>
+                            <span>></span>
+                            <meta itemprop="position" content="2"/>
+                        </li>
+                        <li>
+                            <span>Lẩu</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <section class="wapper">
+                <div class="wapcontent">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h1>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/an-uong">Ăn uống<span class="pasgo-icondesktop-menublack"></span></a>
+                                <a>Lẩu - TP.HCM</a>
+                            </h1>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group">
+                                <div class="input-group-addon">Chọn quận, huyện tại
+                                    <b>TP.HCM
+                                    </b>:
+                                </div>
+                                <select onChange="location.href = this.value" id="chon-danh-muc" class="form-control">
+                                    <option value="https://pasgo.vn/ho-chi-minh/nha-hang/lau-27">--Chọn Quận, Huyện--</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/quan-1/nha-hang/lau-27-12">Quận 1</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/quan-2/nha-hang/lau-27-13">Quận 2</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/quan-3/nha-hang/lau-27-14">Quận 3</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/quan-4/nha-hang/lau-27-15">Quận 4</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/quan-5/nha-hang/lau-27-16">Quận 5</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/quan-6/nha-hang/lau-27-17">Quận 6</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/quan-7/nha-hang/lau-27-18">Quận 7</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/quan-8/nha-hang/lau-27-19">Quận 8</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/quan-9/nha-hang/lau-27-20">Quận 9</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/quan-10/nha-hang/lau-27-21">Quận 10</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/quan-11/nha-hang/lau-27-22">Quận 11</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/quan-12/nha-hang/lau-27-23">Quận 12</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/go-vap/nha-hang/lau-27-24">G&amp;#242; Vấp</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/binh-thanh/nha-hang/lau-27-25">B&amp;#236;nh Thạnh</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/tan-binh/nha-hang/lau-27-26">T&amp;#226;n B&amp;#236;nh</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/tan-phu/nha-hang/lau-27-27">T&amp;#226;n Ph&amp;#250;</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/phu-nhuan/nha-hang/lau-27-28">Ph&amp;#250; Nhuận</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/binh-tan/nha-hang/lau-27-29">B&amp;#236;nh T&amp;#226;n</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/thu-duc/nha-hang/lau-27-30">Thủ Đức</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/binh-chanh/nha-hang/lau-27-31">B&amp;#236;nh Ch&amp;#225;nh</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/nha-be/nha-hang/lau-27-32">Nh&amp;#224; B&amp;#232;</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/hoc-mon/nha-hang/lau-27-33">H&amp;#243;c M&amp;#244;n</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/thu-dau-mot/nha-hang/lau-27-37">Thủ Dầu Một</option>
+                                    <option value="https://pasgo.vn/ho-chi-minh/huyen-cu-chi/nha-hang/lau-27-52">Huyện Củ Chi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <h3>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang" class="">Nhà hàng</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/lau-27" class="active">Lẩu</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/buffet-29" class="">Buffet</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/hai-san-28" class="">Hải sản</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/lau-and-nuong-91" class="">Lẩu &amp; Nướng</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/quan-nhau-165" class="">Quán Nhậu</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/mon-chay-44" class="">Món chay</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/dat-tiec-224" class="">Đặt tiệc</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/han-quoc-16" class="">Hàn Quốc</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/nhat-ban-15" class="">Nhật Bản</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/mon-au-23" class="">Món Âu</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/mon-viet-21" class="">Món Việt</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/mon-thai-18" class="">Món Thái</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/mon-trung-hoa-126" class="">Món Trung Hoa</a>
+                                <a rel="tag" href="https://pasgo.vn/ho-chi-minh/nha-hang/tiec-cuoi-143" class="">Tiệc cưới</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row wapfoody">
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/chang-kang-kung-hap-thuy-nhiet-hong-kong-cong-hoa-2786" class="waptop" target="_blank">
+                                    <img src="https://pasgo.vn/Upload/anh-diem-den/chang-kang-kung-hap-thuy-nhiet-hong-kong-cong-hoa-300-45876642786.jpg" alt="Chang Kang Kung – Hấp Thủy Nhiệt Hong Kong Cộng Hòa" class="img-responsive"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/chang-kang-kung-hap-thuy-nhiet-hong-kong-cong-hoa-2786" target="_blank">Chang Kang Kung – Hấp Thủy Nhiệt Hong Kong - Cộng Hòa</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="4"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">Số 77 Cộng Hòa, P. 4, Q.Tân Bình
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm tới
+                                    <strong>30%</strong>
+                                </div>
+                                <div class="waptag">Gọi món Hong Kong
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/chang-kang-kung-hap-thuy-nhiet-hong-kong-cong-hoa-2786" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/nha-hang-lau-nam-ashima-nguyen-trai-2333" class="waptop" target="_blank">
+                                    <img src="https://pasgo.vn/Upload/anh-diem-den/nha-hang-lau-nam-ashima-nguyen-trai-300-26767662333.jpg" alt="Nhà hàng Lẩu Nấm Ashima Nguyễn Trãi" class="img-responsive"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-lau-nam-ashima-nguyen-trai-2333" target="_blank">Lẩu Nấm Ashima - Nguyễn Trãi</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="3.9"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="3"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">331A Nguyễn Trãi, P. Nguyễn Cư Trinh, Q. 1
+                                    </p>
+                                </div>
+                                <div class="wapsale">Đặt b&amp;agrave;n được giữ chỗ
+                                    <strong></strong>
+                                </div>
+                                <div class="waptag">Gọi món, buffet Lẩu Nấm
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-lau-nam-ashima-nguyen-trai-2333" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/nha-hang-gyu-shige-nguu-phon-ton-that-thiep-2807" class="waptop" target="_blank">
+                                    <img src="https://pasgo.vn/Upload/anh-diem-den/nha-hang-gyu-shige-nguu-phon-ton-that-thiep-300-47237972807.jpg" alt="Nhà hàng Gyu Shige Ngưu Phồn Tôn Thất Thiệp" class="img-responsive"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-gyu-shige-nguu-phon-ton-that-thiep-2807" target="_blank">Gyu Shige Ngưu Phồn - Tôn Thất Thiệp</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="4"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="3"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">Số 21 – 23 – 25 - 27 Tôn Thất Thiệp, P. Bến Nghé, Q. 1
+                                    </p>
+                                </div>
+                                <div class="wapsale">Đặt b&amp;agrave;n được giữ chỗ
+                                </div>
+                                <div class="waptag">Gọi món nướng lẩu Nhật Bản
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-gyu-shige-nguu-phon-ton-that-thiep-2807" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/chang-kang-kung-hap-thuy-nhiet-hong-kong-phan-dang-luu-2785" class="waptop" target="_blank">
+                                    <img src="https://pasgo.vn/Upload/anh-diem-den/chang-kang-kung-hap-thuy-nhiet-hong-kong-phan-dang-luu-300-45873702785.jpg" alt="Chang Kang Kung – Hấp Thủy Nhiệt Hong Kong Phan Đăng Lưu" class="img-responsive"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/chang-kang-kung-hap-thuy-nhiet-hong-kong-phan-dang-luu-2785" target="_blank">Chang Kang Kung –  Hấp Thủy Nhiệt Hong Kong - Phan Đăng Lưu</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="4"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">Số 128C Phan Đăng Lưu, P. 03, Q. Phú Nhuận
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm tới
+                                    <strong>30%</strong>
+                                </div>
+                                <div class="waptag">Gọi món Hong Kong
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/chang-kang-kung-hap-thuy-nhiet-hong-kong-phan-dang-luu-2785" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/hotpot-story-le-van-sy-2513" class="waptop" target="_blank">
+                                    <img src="https://pasgo.vn/Upload/anh-diem-den/hotpot-story-le-van-sy-300-31682882513.jpg" alt="Hotpot Story Lê Văn Sỹ" class="img-responsive"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/hotpot-story-le-van-sy-2513" target="_blank">Hotpot Story – Lê Văn Sỹ</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="3.7"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">Số 409 Lê Văn Sỹ, P. 12, Q. 3
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm tới
+                                    <strong>15%</strong>
+                                </div>
+                                <div class="waptag">Buffet Lẩu Châu Á
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/hotpot-story-le-van-sy-2513" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/nha-hang-gyu-shige-nguu-phon-saigon-centre-2805" class="waptop" target="_blank">
+                                    <img src="https://pasgo.vn/Upload/anh-diem-den/nha-hang-gyu-shige-nguu-phon-saigon-centre-300-47235542805.jpg" alt="Nhà hàng Gyu Shige Ngưu Phồn Saigon Centre" class="img-responsive"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-gyu-shige-nguu-phon-saigon-centre-2805" target="_blank">Gyu Shige Ngưu Phồn - Saigon Centre</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="4"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="3"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">Lầu 5, L5-16, Zone 3, Saigon Centre, Số 65 Lê Lợi, P. Bến Nghé, Q. 1
+                                    </p>
+                                </div>
+                                <div class="wapsale">Đặt b&amp;agrave;n được giữ chỗ
+                                </div>
+                                <div class="waptag">Gọi món nướng lẩu Nhật Bản
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-gyu-shige-nguu-phon-saigon-centre-2805" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/food-house-nguyen-kiem-go-vap-1493" class="waptop" target="_blank">
+                                    <img src="https://pasgo.vn/Upload/anh-diem-den/food-house-nguyen-kiem-go-vap-300-123472051493.jpg" alt="Food House Nguyễn Kiệm Gò Vấp" class="img-responsive"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/food-house-nguyen-kiem-go-vap-1493" target="_blank">Food House – Nguyễn Kiệm</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="4"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">800 Nguyễn Kiệm, P. 3, Q. Gò Vấp
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm tới
+                                    <strong>23%</strong>
+                                </div>
+                                <div class="waptag">Buffet Lẩu, Gọi món Việt - Thái
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/food-house-nguyen-kiem-go-vap-1493" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/food-house-171-nam-ky-khoi-nghia-1228" class="waptop" target="_blank">
+                                    <img src="https://pasgo.vn/Upload/anh-diem-den/food-house-171-nam-ky-khoi-nghia-300-123471891228.jpg" alt="Food House 171 Nam Kỳ Khởi Nghĩa" class="img-responsive"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/food-house-171-nam-ky-khoi-nghia-1228" target="_blank">Food House - Nam Kỳ Khởi Nghĩa</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="4"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">171 Nam Kỳ Khởi Nghĩa, P. 6, Q. 3
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm tới
+                                    <strong>23%</strong>
+                                </div>
+                                <div class="waptag">Buffet Lẩu, Gọi món Việt - Thái
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/food-house-171-nam-ky-khoi-nghia-1228" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/chang-kang-kung-hap-thuy-nhiet-hong-kong-kinh-duong-vuong-2787" class="waptop" target="_blank">
+                                    <img data-src="https://pasgo.vn/Upload/anh-diem-den/chang-kang-kung-hap-thuy-nhiet-hong-kong-kinh-duong-vuong-300-45890572787.jpg" src="https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png" alt="Chang Kang Kung – Hấp Thủy Nhiệt Hong Kong Kinh Dương Vương" class="img-responsive lazyload"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/chang-kang-kung-hap-thuy-nhiet-hong-kong-kinh-duong-vuong-2787" target="_blank">Chang Kang Kung – Hấp Thủy Nhiệt Hong Kong - Kinh Dương Vương</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="4"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">Số 99 Kinh Dương Vương, P. 12, Q. 6
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm tới
+                                    <strong>30%</strong>
+                                </div>
+                                <div class="waptag">Gọi món Hong Kong
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/chang-kang-kung-hap-thuy-nhiet-hong-kong-kinh-duong-vuong-2787" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/nha-hang-lau-nam-ashima-nguyen-dinh-chieu-1075" class="waptop" target="_blank">
+                                    <img data-src="https://pasgo.vn/Upload/anh-diem-den/nha-hang-lau-nam-ashima-nguyen-dinh-chieu-300-25035431075.jpg" src="https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png" alt="Nhà hàng Lẩu Nấm Ashima Nguyễn Đình Chiểu" class="img-responsive lazyload"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-lau-nam-ashima-nguyen-dinh-chieu-1075" target="_blank">Lẩu Nấm Ashima - Nguyễn Đình Chiểu</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="3.9"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="3"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">35A Nguyễn Đình Chiểu, P. Đa Kao, Q. 1
+                                    </p>
+                                </div>
+                                <div class="wapsale">Đặt b&amp;agrave;n được giữ chỗ
+                                    <strong></strong>
+                                </div>
+                                <div class="waptag">Gọi món, buffet Lẩu Nấm
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-lau-nam-ashima-nguyen-dinh-chieu-1075" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/nha-hang-gyu-shige-nguu-phon-nguyen-thi-minh-khai-2806" class="waptop" target="_blank">
+                                    <img data-src="https://pasgo.vn/Upload/anh-diem-den/nha-hang-gyu-shige-nguu-phon-nguyen-thi-minh-khai-300-47236322806.jpg" src="https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png" alt="Nhà hàng Gyu Shige Ngưu Phồn Nguyễn Thị Minh Khai" class="img-responsive lazyload"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-gyu-shige-nguu-phon-nguyen-thi-minh-khai-2806" target="_blank">Gyu Shige Ngưu Phồn - Nguyễn Thị Minh Khai</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="4"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="3"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">Số 183A Nguyễn Thị Minh Khai, P. Phạm Ngũ Lão, Q. 1
+                                    </p>
+                                </div>
+                                <div class="wapsale">Đặt b&amp;agrave;n được giữ chỗ
+                                </div>
+                                <div class="waptag">Gọi món nướng lẩu Nhật Bản
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-gyu-shige-nguu-phon-nguyen-thi-minh-khai-2806" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/nha-hang-lau-nam-ashima-xuan-thuy-2334" class="waptop" target="_blank">
+                                    <img data-src="https://pasgo.vn/Upload/anh-diem-den/nha-hang-lau-nam-ashima-xuan-thuy-300-26772332334.jpg" src="https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png" alt="Nhà hàng Lẩu Nấm Ashima Xuân Thủy" class="img-responsive lazyload"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-lau-nam-ashima-xuan-thuy-2334" target="_blank">Lẩu Nấm Ashima - Xuân Thủy</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="3.9"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="3"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">Số 93 Xuân Thủy, P. Thảo Điền, Q. 2
+                                    </p>
+                                </div>
+                                <div class="wapsale">Đặt b&amp;agrave;n được giữ chỗ
+                                    <strong></strong>
+                                </div>
+                                <div class="waptag">Gọi món, buffet Lẩu Nấm
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-lau-nam-ashima-xuan-thuy-2334" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/hotpot-story-takashimaya-2516" class="waptop" target="_blank">
+                                    <img data-src="https://pasgo.vn/Upload/anh-diem-den/hotpot-story-takashimaya-300-31698162516.jpg" src="https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png" alt="Hotpot Story Takashimaya" class="img-responsive lazyload"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/hotpot-story-takashimaya-2516" target="_blank">Hotpot Story – Saigon Centre</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="3.7"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">Saigon Center, Tầng 5, L5-02, Số 65 Lê Lợi, P. Bến Nghé, Q. 1
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm tới
+                                    <strong>
+                                        <span style="color:#cc0000;">15</span>
+                                    </strong>
+                                    <strong>%</strong>
+                                </div>
+                                <div class="waptag">Buffet Lẩu Châu Á
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/hotpot-story-takashimaya-2516" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/hotpot-story-pearl-plaza-2506" class="waptop" target="_blank">
+                                    <img data-src="https://pasgo.vn/Upload/anh-diem-den/hotpot-story-pearl-plaza-300-31601902506.jpg" src="https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png" alt="Hotpot Story Pearl Plaza" class="img-responsive lazyload"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/hotpot-story-pearl-plaza-2506" target="_blank">Hotpot Story - Pearl Plaza</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="3.7"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">L4-07, Tầng 4, TTTM Pearl Plaza, số 561A Điện Biên Phủ, P. 25, Q. Bình Thạnh
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm tới 15
+                                    <strong>%</strong>
+                                </div>
+                                <div class="waptag">Buffet Lẩu Châu Á
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/hotpot-story-pearl-plaza-2506" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/food-house-phan-xich-long-phu-nhuan-1370" class="waptop" target="_blank">
+                                    <img data-src="https://pasgo.vn/Upload/anh-diem-den/food-house-phan-xich-long-phu-nhuan-300-123471991370.jpg" src="https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png" alt="Food House Phan Xích Long Phú Nhuận" class="img-responsive lazyload"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/food-house-phan-xich-long-phu-nhuan-1370" target="_blank">Food House - Phan Xích Long</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="4"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">135 Phan Xích Long, P. 7, Q. Phú Nhuận
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm tới
+                                    <strong>23%</strong>
+                                </div>
+                                <div class="waptag">Buffet Lẩu, Gọi món Việt - Thái
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/food-house-phan-xich-long-phu-nhuan-1370" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/hotpot-story-aeon-mall-binh-tan-2507" class="waptop" target="_blank">
+                                    <img data-src="https://pasgo.vn/Upload/anh-diem-den/hotpot-story-aeon-mall-binh-tan-300-31649042507.jpg" src="https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png" alt="Hotpot Story Aeon Mall Bình Tân" class="img-responsive lazyload"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/hotpot-story-aeon-mall-binh-tan-2507" target="_blank">Hotpot Story – Aeon Mall Bình Tân</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="3.7"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">Gian hàng T6 - Tầng 3, TTTM Aeon Mall Bình Tân, Số 01 đường số 17A, khu phố 11, P. Bình Trị Đông B, Q. Bình Tân
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm tới
+                                    <strong>15%</strong>
+                                </div>
+                                <div class="waptag">Buffet Lẩu Châu Á
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/hotpot-story-aeon-mall-binh-tan-2507" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/ba-gac-nuong-and-bia-ut-tich-3549" class="waptop" target="_blank">
+                                    <img data-src="https://pasgo.vn/Upload/anh-diem-den/ba-gac-nuong-and-bia-ut-tich-300-106070593549.jpg" src="https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png" alt="Ba Gác - Nướng &amp; Bia Út Tịch  " class="img-responsive lazyload"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/ba-gac-nuong-and-bia-ut-tich-3549" target="_blank">Ba Gác - Nướng &amp; Bia - Út Tịch</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="4"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="3"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">Số 92 Út Tịch, P. 4, Q. Tân Bình
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm
+                                    <strong>10%</strong>
+                                </div>
+                                <div class="waptag">Gọi món Việt (Nướng &amp; Bia)
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/ba-gac-nuong-and-bia-ut-tich-3549" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/food-house-nguyen-tri-phuong-2127" class="waptop" target="_blank">
+                                    <img data-src="https://pasgo.vn/Upload/anh-diem-den/food-house-nguyen-tri-phuong-300-123471912127.jpg" src="https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png" alt="Food House Nguyễn Tri Phương" class="img-responsive lazyload"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/food-house-nguyen-tri-phuong-2127" target="_blank">Food House - Nguyễn Tri Phương</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="4"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">Số 230 Nguyễn Tri Phương, P. 04, Q. 10
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm tới
+                                    <strong>23%</strong>
+                                </div>
+                                <div class="waptag">Buffet Lẩu, Gọi món Việt - Thái
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/food-house-nguyen-tri-phuong-2127" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/king-bbq-buffet-nguyen-anh-thu-2486" class="waptop" target="_blank">
+                                    <img data-src="https://pasgo.vn/Upload/anh-diem-den/king-bbq-buffet-nguyen-anh-thu-300-31108892486.jpg" src="https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png" alt="King BBQ Buffet Nguyễn Ảnh Thủ" class="img-responsive lazyload"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/king-bbq-buffet-nguyen-anh-thu-2486" target="_blank">King BBQ Buffet - Nguyễn Ảnh Thủ</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="4"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="3"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">10B/A Khu phố 01 đường Nguyễn Ảnh Thủ, P. Trung Mỹ Tây, Q. 12
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm tới
+                                    <strong>15%</strong>
+                                </div>
+                                <div class="waptag">Buffet nướng Hàn Quốc
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/king-bbq-buffet-nguyen-anh-thu-2486" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="wapitem">
+                                <a href="https://pasgo.vn/nha-hang/nha-hang-tasaki-bbq-aeon-mall-binh-tan-2539" class="waptop" target="_blank">
+                                    <img data-src="https://pasgo.vn/Upload/anh-diem-den/nha-hang-tasaki-bbq-aeon-mall-binh-tan-300-32952152539.jpg" src="https://pasgo.vn/Assets/Images/holder/img-holder-600x600.png" alt="Nhà hàng Tasaki BBQ Aeon Mall Bình Tân" class="img-responsive lazyload"/>
+                                </a>
+                                <div class="wapfooter">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-tasaki-bbq-aeon-mall-binh-tan-2539" target="_blank">Tasaki BBQ - Aeon Mall Bình Tân</a>
+                                    <div class="row">
+                                        <div class="col-md-6 wapstar">
+                                            <div property="aggregateRating" class="danhgia-ct shadow-outside" typeof="AggregateRating">
+                                                <input name="ratingDanhGia" data-display-only="true" class="rating rating-sao form-control hide" value="3.8"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 wapdollar">
+                                            <div class="danhgia-ct shadow-outside">
+                                                <input name="ratingChatLuong" data-display-only="true" class="rating-usd form-control hide" value="3"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-address notranslate">Aeon Mall Bình Tân, Tầng 3, Số 532A Đường Kinh Dương Vương, P. Bình Trị Đông B, Q. Bình Tân
+                                    </p>
+                                </div>
+                                <div class="wapsale">Giảm tới
+                                    <strong>20%</strong>
+                                </div>
+                                <div class="waptag">Gọi món nướng Nhật Bản
+                                </div>
+                                <div class="wapbooking">
+                                    <a href="https://pasgo.vn/nha-hang/nha-hang-tasaki-bbq-aeon-mall-binh-tan-2539" class="btn-booking " target="_blank">Đặt chỗ ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 navigation">
+                            <ul class="pagination">
+                                <li class="active">
+                                    <a href="https://pasgo.vn/ho-chi-minh/nha-hang/lau-27">1</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://pasgo.vn/ho-chi-minh/nha-hang/lau-27?page=2">2</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://pasgo.vn/ho-chi-minh/nha-hang/lau-27?page=3">3</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://pasgo.vn/ho-chi-minh/nha-hang/lau-27?page=4">4</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://pasgo.vn/ho-chi-minh/nha-hang/lau-27?page=5">5</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://pasgo.vn/ho-chi-minh/nha-hang/lau-27?page=6">6</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://pasgo.vn/ho-chi-minh/nha-hang/lau-27?page=7">7</a>
+                                </li>
+                                <li class="">
+                                    <a href="https://pasgo.vn/ho-chi-minh/nha-hang/lau-27?page=8">8</a>
+                                </li>
+                                <li>
+                                    <a rel="next" href="https://pasgo.vn/ho-chi-minh/nha-hang/lau-27?page=2">»</a>
+                                </li>
+                                <li>
+                                    <a rel="next" href="https://pasgo.vn/ho-chi-minh/nha-hang/lau-27?page=16">»»</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="wapper">
+                <div class="wapcontent">
+                    <div class="row waphuongdan">
+                        <div class="col-md-12">
+                            <h2>Hướng dẫn đặt bàn nhận ưu đãi
+                            </h2>
+                            <hr class="line-tutorial"/>
+                            <p>Xem chi tiết hướng dẫn
+                                <a href="https://pasgo.vn/huong-dan" target="_blank">tại đây</a>
+                            </p>
+                        </div>
+                        <div class="col-md-12">
+                            <img data-src="https://pasgo.vn/Assets/Images/icon-chon-nha-hang.png" src="https://pasgo.vn/Assets/Images/holder/img-holder-909x344.png" alt="hướng dẫn đặt bàn" class="lazyload"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="smoothscroll-top">
+        <span class="scroll-top-inner">
+            <span>&amp;uarr;</span>
+        </span>
+    </div>
+    <article id="home-notify-pasgo">
+    </article>
+    <footer data-provinceId="2" id="footer" class="lazyload lazypreload">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 text-info">
+                    <a href="https://pasgo.vn/ho-chi-minh">
+                        <span class="pasgo-icondesktop-logo"></span>
+                    </a>
+                    <div>PasGo là Mạng lưới nhà hàng NGON, uy tín và chất lượng. Giúp thực khách đặt bàn dễ dàng, được tặng kèm ưu đãi mà không cần mua Deal, Voucher. Giải pháp đột phá mới cho câu chuyện ăn gì, ở đâu!
+                    </div>
+                </div>
+                <div id="ve-pasgo" class="col-md-2">
+                </div>
+                <div class="col-md-2">
+                    <h3>Tương tác
+                    </h3>
+                    <ul>
+                        <li>
+                            <a href="https://pasgo.vn/co-che-giai-quyet-tranh-chap" target="_blank">Khiếu nại</a>
+                        </li>
+                        <li>
+                            <a href="https://pasgo.vn/cau-hoi-thuong-gap" target="_blank">Câu hỏi thường gặp</a>
+                        </li>
+                        <li>
+                            <a href="https://pasgo.vn/danh-cho-nha-hang" target="_blank">Dành cho nhà hàng</a>
+                        </li>
+                        <li>
+                            <a href="https://pasgo.vn/tin-tuc" target="_blank">Tin tức</a>
+                        </li>
+                        <li>
+                            <a href="https://pasgo.vn/lien-he" target="_blank">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Tham gia với chúng tôi
+                    </h3>
+                    <div class="pasgo-social">
+                        <a rel="nofollow" href="https://www.facebook.com/pasgo.vn" target="_blank">
+                            <span class="pasgo-icondesktop-facebook"></span>
+                        </a>
+                        <a rel="nofollow" href="https://plus.google.com/b/100191765057279539886/112877402556770962948/posts?pageId=100191765057279539886" target="_blank">
+                            <span class="pasgo-icondesktop-googleplus"></span>
+                        </a>
+                        <a rel="nofollow" href="https://www.youtube.com/channel/UCZVrGI9UypsJxa-U_-DC2qg" target="_blank">
+                            <span class="pasgo-icondesktop-youtube"></span>
+                        </a>
+                    </div>
+                    <h3>Thương hiệu được chứng nhận
+                    </h3>
+                    <a rel="nofollow" href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=16895" class="link-bct" target="_blank">
+                        <span class="pasgo-icondesktop-dkbocongthuong"></span>
+                    </a>
+                    <a rel="nofollow" href="//www.dmca.com/Protection/Status.aspx?ID=25701f4d-601c-4a62-acbd-eef1c7d4b620" title="DMCA.com Protection Status" class="dmca-badge">
+                        <span class="pasgo-icondesktop-logodmca"></span>
+                    </a>
+                </div>
+                <div class="col-md-3 dk-mail">
+                    <h3>Đăng ký nhận bản tin khuyến mãi
+                    </h3>
+                    <div>Đăng ký nhận thông tin ưu đãi hấp dẫn và khám phá, cập nhật các xu hướng ẩm thực mới lạ, thú vị.
+                    </div>
+                    <div class="input-group">
+                        <input placeholder="Email của bạn" type="text" class="form-control"/>
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-send-mail">Gửi</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <h4>
+                        <span>© Copyright 2010 onepas.jsc, All rights reserved</span>
+                    </h4>
+                    <div class="link-company">
+                        <a rel="nofollow" href="http://onepas.com/" target="_blank">CÔNG TY CỔ PHẦN ONEPAS</a>
+                    </div>
+                    <p>Văn phòng Hà Nội: Tầng 2 tòa nhà VTC Online, Số 18 Tam Trinh, Q. Hai Bà Trưng, Hà Nội
+                    </p>
+                    <p>Văn Phòng TP.HCM: Lầu 13, Tòa nhà M-H, Số 728-730 Võ Văn Kiệt, P.1, Quận 5, TP Hồ Chí Minh
+                    </p>
+                    <p>Tổng đài: 1900 6005 | Email: CSKH@pasgo.vn
+                    </p>
+                    <p>Mã số doanh nghiệp: 0106329034 do Sở Kế hoạch đầu tư TP Hà Nội cấp ngày 08/10/2013
+                    </p>
+                    <p>
+                        <span>Chúng tôi đang nỗ lực cải tiến chất lượng và dịch vụ trên app và website. Mọi ý tưởng, ý kiến đóng góp của khách hàng cho chúng tôi đều được ghi nhận và trân trọng!</span>
+                    </p>
+                </div>
+                <div class="col-md-12 qctags">
+                    <hr/>
+                    <a rel="nofollow" href="https://soketqua.vn" target="_blank">Kết quả Xổ số |</a>
+                    <a rel="nofollow" href="https://soketqua.vn/xsmb-sxmb-kqxsmb-xo-so-mien-bac" target="_blank">Kết quả XSMB |</a>
+                    <a rel="nofollow" href="http://gody.vn/" target="_blank">Du lịch</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="bootstrap snippets">
+                    <div class="pasgo-khung-chat">
+                        <div class="box-chat-pasgo box-success direct-chat direct-chat-success">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">Chat ngay để được tư vấn
+                                </h3>
+                                <div class="box-tools pull-right">
+                                    <button data-widget="remove" type="button" class="btn btn-box-tool btn-close-box">
+                                        <i class="glyphicon glyphicon-remove">
+                                        </i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="box-body">
+                                <div id="box-error">Đang tải...
+                                </div>
+                                <div id="pasgo-chat-message" class="direct-chat-messages">
+                                    <div id="see-history-chat">
+                                        <a href="JavaScript:loadMoreMessage()">Xem thêm lịch sử</a>
+                                    </div>
+                                </div>
+                                <div id="box-typing">
+                                </div>
+                            </div>
+                            <div class="box-footer">
+                                <form id="send-form">
+                                    <div class="input-group">
+                                        <input autocomplete="off" id="message-client" placeholder="Nhập tin nhắn..." type="text" class="form-control"/>
+                                        <span class="input-group-btn">
+                                            <button id="send-message" type="button" class="btn btn-success btn-flat">Gửi</button>
+                                        </span>
+                                    </div>
+                                </form>
+                                <span class="pasgo-footer">
+                                    <a href="https://pasgo.vn/">PasGo.vn</a>
+                                </span>
+                            </div>
+                            <div id="box-user-info">
+                                <form>
+                                    <div class="input-group">
+                                        <span id="user-info-error"></span>
+                                        <div class="box-user-input">
+                                            <span>Bạn vui lòng điền các thông tin dưới đây để bắt đầu chat ngay.</span>
+                                        </div>
+                                        <div class="box-user-input">
+                                            <input autocomplete="off" id="phone-client" placeholder="* Điện thoại" type="text" class="form-control"/>
+                                            <br/>
+                                            <span id="phone-error"></span>
+                                        </div>
+                                        <div class="box-user-input">
+                                            <input autocomplete="off" id="email-client" placeholder="* Email" type="text" class="form-control"/>
+                                            <br/>
+                                            <span id="email-error"></span>
+                                        </div>
+                                        <div class="box-user-button">
+                                            <button id="submit-info-client" type="button">Bắt đầu trò truyện</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show-box-chat show">
+                        <span class="scroll-top-inner"></span>
+                        <div class="number-message">
+                            <span id="number-message">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXPW4XX" width="0" style="display:none;visibility:hidden" height="0"></iframe>
+    </noscript>
+</body>

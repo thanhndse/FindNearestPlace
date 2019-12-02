@@ -100,7 +100,7 @@ public class CrawlService {
             }
 
             // save to db
-            this.saveToDb(placelDtoList);
+            this.saveToDb(placelDtoListValidated);
 
         } catch (Exception ex) {
             Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
@@ -121,6 +121,63 @@ public class CrawlService {
             }
         }
     }
+    
+    public void crawlVietnammm(boolean fromFile) {
+        ByteArrayOutputStream os = null;
+        FileOutputStream fo = null;
+        List<PlaceCrawlDto> placelDtoList;
+        List<PlaceCrawlDto> placelDtoListValidated;
+        try {
+            if (fromFile) {
+                // get xml from file
+                FileInputStream fis = new FileInputStream(realPath + FileConstant.VIETNAMM_OUTPUT_XML);
+
+                // parse by stAX
+                placelDtoList = parseDataByStAX(fis);
+            } else {
+                // crawl from web
+                os = TrAXUtils.transform(realPath + FileConstant.VIETNAMM_INPUT_XML, realPath + FileConstant.VIETNAMM_MAIN_XSL);
+
+                // save to file to test
+                fo = new FileOutputStream(realPath + FileConstant.VIETNAMM_OUTPUT_XML);
+                fo.write(os.toByteArray());
+                fo.flush();
+
+                // parse by stAX
+                placelDtoList = parseDataByStAX(new ByteArrayInputStream(os.toByteArray()));
+            }
+
+            // validate 
+            placelDtoListValidated = new ArrayList<>();
+            for (PlaceCrawlDto placeCrawlDto : placelDtoList) {
+                if (isValid(placeCrawlDto)) {
+                    placelDtoListValidated.add(placeCrawlDto);
+                }
+            }
+
+            // save to db
+            this.saveToDb(placelDtoListValidated);
+
+        } catch (Exception ex) {
+            Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
+        } finally {
+            if (fo != null) {
+                try {
+                    fo.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
+                }
+            }
+            if (os != null) {
+                try {
+                    os.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
+                }
+            }
+        }
+    }
+    
 
     public void saveToDb(List<PlaceCrawlDto> placeCrawlDtos) {
         placeCrawlDtos.stream().forEach(dto -> {
@@ -170,7 +227,7 @@ public class CrawlService {
 
                     //convert categoriesStringArray to Set and add to placeCrawlDto object 
                     if (categoriesString != null) {
-                        String[] categoriesStringArray = categoriesString.split(",");
+                        String[] categoriesStringArray = categoriesString.split(",|(và)");
                         HashSet<String> categoriesStringSet = new HashSet<>(Arrays.asList(categoriesStringArray));
                         categoriesStringSet.forEach(cate -> cate.trim());
                         placeCrawlDto.setCategoriesStringSet(categoriesStringSet);
@@ -188,7 +245,7 @@ public class CrawlService {
                         currentCategoriesString.addAll(newCategoriesString);
                     } else {
                         mapPlaces.put(placeName, placeCrawlDto);
-                        System.out.println("Add new place: " + placeName);
+                        System.out.println("Add place: " + placeCrawlDto.getName());
                     }
                 }
             }
@@ -210,10 +267,8 @@ public class CrawlService {
             return true;
         } catch (JAXBException ex) {
             Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("Failed " + placeCrawlDto.getName());
         } catch (SAXException ex) {
             Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("Failed " + placeCrawlDto.getName());
         }
         return false;
     }
