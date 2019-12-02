@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.transform.TransformerException;
 import org.hibernate.Session;
+import thanhnd.constant.FileConstant;
 import thanhnd.service.CrawlService;
 import thanhnd.utils.HibernateUtil;
 
@@ -45,7 +46,8 @@ public class CrawlServlet extends HttpServlet {
             ServletContext context = request.getServletContext();
             String realPath = context.getRealPath("/");
             CrawlService crawlService = new CrawlService(hibernateSession, realPath);
-            crawlService.crawlVietnammm(false);
+//            crawlService.crawlData(FileConstant.PASGO_INPUT_XML, FileConstant.PASGO_MAIN_XSL, FileConstant.PASGO_OUTPUT_XML, true);
+            crawlService.crawlData(FileConstant.VIETNAMM_INPUT_XML, FileConstant.VIETNAMM_MAIN_XSL, FileConstant.VIETNAMM_OUTPUT_XML ,true);
             System.out.println("End crawled");
         } finally {
             out.close();

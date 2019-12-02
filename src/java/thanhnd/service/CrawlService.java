@@ -121,63 +121,10 @@ public class CrawlService {
             }
         }
     }
-    
+
     public void crawlVietnammm(boolean fromFile) {
-        ByteArrayOutputStream os = null;
-        FileOutputStream fo = null;
-        List<PlaceCrawlDto> placelDtoList;
-        List<PlaceCrawlDto> placelDtoListValidated;
-        try {
-            if (fromFile) {
-                // get xml from file
-                FileInputStream fis = new FileInputStream(realPath + FileConstant.VIETNAMM_OUTPUT_XML);
 
-                // parse by stAX
-                placelDtoList = parseDataByStAX(fis);
-            } else {
-                // crawl from web
-                os = TrAXUtils.transform(realPath + FileConstant.VIETNAMM_INPUT_XML, realPath + FileConstant.VIETNAMM_MAIN_XSL);
-
-                // save to file to test
-                fo = new FileOutputStream(realPath + FileConstant.VIETNAMM_OUTPUT_XML);
-                fo.write(os.toByteArray());
-                fo.flush();
-
-                // parse by stAX
-                placelDtoList = parseDataByStAX(new ByteArrayInputStream(os.toByteArray()));
-            }
-
-            // validate 
-            placelDtoListValidated = new ArrayList<>();
-            for (PlaceCrawlDto placeCrawlDto : placelDtoList) {
-                if (isValid(placeCrawlDto)) {
-                    placelDtoListValidated.add(placeCrawlDto);
-                }
-            }
-
-            // save to db
-            this.saveToDb(placelDtoListValidated);
-
-        } catch (Exception ex) {
-            Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
-        } finally {
-            if (fo != null) {
-                try {
-                    fo.close();
-                } catch (IOException ex) {
-                    Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
-                }
-            }
-            if (os != null) {
-                try {
-                    os.close();
-                } catch (IOException ex) {
-                    Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
-                }
-            }
-        }
     }
-    
 
     public void saveToDb(List<PlaceCrawlDto> placeCrawlDtos) {
         placeCrawlDtos.stream().forEach(dto -> {
@@ -228,8 +175,10 @@ public class CrawlService {
                     //convert categoriesStringArray to Set and add to placeCrawlDto object 
                     if (categoriesString != null) {
                         String[] categoriesStringArray = categoriesString.split(",|(và)");
-                        HashSet<String> categoriesStringSet = new HashSet<>(Arrays.asList(categoriesStringArray));
-                        categoriesStringSet.forEach(cate -> cate.trim());
+                        HashSet<String> categoriesStringSet = new HashSet<>();
+                        for (String category: categoriesStringArray){
+                            categoriesStringSet.add(category.trim());
+                        }
                         placeCrawlDto.setCategoriesStringSet(categoriesStringSet);
                     }
                 }
@@ -271,5 +220,61 @@ public class CrawlService {
             Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;
+    }
+
+    public void crawlData(String inputXml, String mainXsl, String outputXml, boolean isFromFile) {
+        ByteArrayOutputStream os = null;
+        FileOutputStream fo = null;
+        List<PlaceCrawlDto> placelDtoList;
+        List<PlaceCrawlDto> placelDtoListValidated;
+        try {
+            if (isFromFile) {
+                // get xml from file
+                FileInputStream fis = new FileInputStream(realPath + outputXml);
+
+                // parse by stAX
+                placelDtoList = parseDataByStAX(fis);
+            } else {
+                // crawl from web
+                os = TrAXUtils.transform(realPath + inputXml, realPath + mainXsl);
+
+                // save to file to test
+                fo = new FileOutputStream(realPath + outputXml);
+                fo.write(os.toByteArray());
+                fo.flush();
+
+                // parse by stAX
+                placelDtoList = parseDataByStAX(new ByteArrayInputStream(os.toByteArray()));
+            }
+
+            // validate 
+            placelDtoListValidated = new ArrayList<>();
+            for (PlaceCrawlDto placeCrawlDto : placelDtoList) {
+                if (isValid(placeCrawlDto)) {
+                    placelDtoListValidated.add(placeCrawlDto);
+                }
+            }
+
+            // save to db
+            this.saveToDb(placelDtoListValidated);
+
+        } catch (Exception ex) {
+            Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
+        } finally {
+            if (fo != null) {
+                try {
+                    fo.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
+                }
+            }
+            if (os != null) {
+                try {
+                    os.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(CrawlService.class.getName()).log(Level.SEVERE, TAG + ex.getMessage());
+                }
+            }
+        }
     }
 }

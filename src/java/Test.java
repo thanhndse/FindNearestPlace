@@ -1,5 +1,7 @@
 
 import thanhnd.checker.XmlSyntaxChecker;
+import thanhnd.repository.CategoryRepository;
+import thanhnd.utils.HibernateUtil;
 import thanhnd.utils.HttpUtils;
 
 /*
@@ -19,10 +21,13 @@ public class Test {
 //        content = checker.refineHtml(content);
 //        content = checker.check(content);
 //        System.out.println("a");
-            String str = "Món pháp, món ý và món việt";
-            String[] arr = str.split(",|(và)");
-            for (String a: arr){
-                System.out.println(a.trim());
-            }
+//            String str = "Món pháp, món ý và món việt";
+//            String[] arr = str.split(",|(và)");
+//            for (String a: arr){
+//                System.out.println(a.trim());
+//            }
+            
+            CategoryRepository categoryRepository = new CategoryRepository(HibernateUtil.getSessionFactory().openSession());
+            System.out.println(categoryRepository.getCategoryByName("Ẩm thực miền Bắc và miền Trung"));
     }
 }

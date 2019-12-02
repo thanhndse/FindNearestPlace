@@ -1,0 +1,788 @@
+<places xmlns="http://thanhnd.xml/vietnammm.com/">
+    <place>
+        <name>Pasha</name>
+        <categoriesString>Món Halal, Món Trung Đông, Món Thổ Nhĩ Kỳ</categoriesString>
+        <fullAddress>25 Đông DuQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/5051R5N/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Fanny</name>
+        <categoriesString>Kem</categoriesString>
+        <fullAddress>29 Tống Hữu Định, Phường Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/5NO3R5N/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Napoli's Pizza</name>
+        <categoriesString>Món Mỹ, Món Châu Âu, Thức uống khác</categoriesString>
+        <fullAddress>356A Hoàng Hữu NamQuận 9 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/53PPR5N/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Harvest Baking Bakery</name>
+        <categoriesString>Bánh ngọt, Món tráng miệng</categoriesString>
+        <fullAddress>10B Đường số 2, KP3, Phường Hiệp Bình ChánhThủ Đức  Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/5O310PN/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Au Parc</name>
+        <categoriesString>Sandwich, Món Trung Đông, Salad</categoriesString>
+        <fullAddress>23 Hàn Thuyên, Phường Bến NghéQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/55531PN/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Hoa Túc</name>
+        <categoriesString>Cơm, Súp, Phở-Mì-Bún</categoriesString>
+        <fullAddress>74/7 Hai Bà TrưngQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/531NNPN/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Central Parc Bánh Mì</name>
+        <categoriesString>Sandwich, Bánh mì &amp;amp; Xôi</categoriesString>
+        <fullAddress>7 Bis Hàn Thuyên, Phường Bến NghéQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/5P1NNPN/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Món Ăn Dinh Dưỡng</name>
+        <categoriesString>Món Khác, Món Trung Quốc, Các món Việt khác</categoriesString>
+        <fullAddress>215 đường số 5 phường bình hưng hòabình tân Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/57PNNPN/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Cork &amp; Bottle</name>
+        <categoriesString>Thức uống khác</categoriesString>
+        <fullAddress>Quận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/5NRRRPN/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Mia Fruit</name>
+        <categoriesString>Món Khác, Món Mỹ, Các món Việt khác</categoriesString>
+        <fullAddress>57 Lê Thị Riêng, Phường Bến ThànhQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/QO157N3/logo.png</image>
+    </place>
+    <place>
+        <name>Gotcha Burger Falafel Kebab Taco</name>
+        <categoriesString>Sandwich, Món Thổ Nhĩ Kỳ, Hamburger</categoriesString>
+        <fullAddress>224 Bùi Viện, Phường Phạm Ngũ LãoQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/QNP7QN3/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Thanh Ky Food</name>
+        <categoriesString>Các món Việt khác, Ẩm thực miền Bắc và miền Trung</categoriesString>
+        <fullAddress>92 Bầu Cát 3Tân Bình Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/QOR0R33/logo.png</image>
+    </place>
+    <place>
+        <name>Luna Sushi</name>
+        <categoriesString>Cơm trưa văn phòng, Món Nhật và Sushi, Salad</categoriesString>
+        <fullAddress>14A Hòa Mỹ, Phường ĐakaoQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/5370153/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Đặc Sản Mọi Miền</name>
+        <categoriesString>Ẩm thực miền Bắc và miền Trung</categoriesString>
+        <fullAddress>62/9 Lê Văn HuânTân Bình Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/50Q0O73/logo.png</image>
+    </place>
+    <place>
+        <name>Rụm - Cơm Cháy Nhà Làm</name>
+        <categoriesString>Các món Việt khác</categoriesString>
+        <fullAddress>149/16 Lê Thị RiêngQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/5135R73/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Chị Hoa Vietnamese Cuisine</name>
+        <categoriesString>Cơm, Ẩm thực miền Bắc và miền Trung, Phở-Mì-Bún</categoriesString>
+        <fullAddress>31A Lê Thánh Tôn, Phường Bến NghéQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/57Q5RQ3/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Jollibee</name>
+        <categoriesString>Sandwich, Cơm, Italian &amp;amp; Pizza</categoriesString>
+        <fullAddress>191 Quang Trung, Phường Hiệp PhúQuận 9 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/50130R3/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Nhà Hàng Chay Hoa Khai</name>
+        <categoriesString>Món Chay</categoriesString>
+        <fullAddress>124-126 Nguyễn Cư Trinh, Phường Nguyễn Cư TrinhQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N077QR3/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Japanit Matcha &amp; Coffee House</name>
+        <categoriesString>Bánh ngọt, Món tráng miệng, Trà sữa - Café</categoriesString>
+        <fullAddress>130 Trần Hưng ĐạoQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/Q315P3O/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Ganges</name>
+        <categoriesString>Món Trung Đông, Món Ấn Độ</categoriesString>
+        <fullAddress>74A2 Hai Bà Trưng, Phường Bến NghéQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NN5QP3O/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Quán Thèm - Cháo Ếch Cay Cay</name>
+        <categoriesString>Món Châu Á khác, Thức uống khác, Các món Việt khác</categoriesString>
+        <fullAddress>62 Tô Vĩnh Diện, Phường Linh ChiểuThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/QQ705OO/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Đặc Sản Nha Trang Ngọc Phương</name>
+        <categoriesString>Món Khác, Ẩm thực miền Bắc và miền Trung</categoriesString>
+        <fullAddress>58/104 KP4, đường TCH21, P.Tân Chánh HiệpQuận 12 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N07035O/logo.png</image>
+    </place>
+    <place>
+        <name>Đặc Sản 03 Miền</name>
+        <categoriesString>Món Khác, Ẩm thực miền Bắc và miền Trung</categoriesString>
+        <fullAddress>Villa 14A50 đường Thảo Điền, P.Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NR7335O/logo.png</image>
+    </place>
+    <place>
+        <name>Jambo Chicken</name>
+        <categoriesString>Món Nhật và Sushi, Món Hàn Quốc</categoriesString>
+        <fullAddress>46/10/29 Nguyễn Cửu Vân , P.17Bình Thạnh Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N13155O/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Vua Cua - King of Crab</name>
+        <categoriesString>Món Ốc và hải sản</categoriesString>
+        <fullAddress>30 Vũ Huy Tấn, phường 3Bình Thạnh Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/Q5157PO/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Anh Tukk</name>
+        <categoriesString>Món Thái Lan</categoriesString>
+        <fullAddress>23 Đồng Khởi, Phường Bến NghéQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/Q17ORPO/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Đặc Sản Đà Nẳng</name>
+        <categoriesString>Ẩm thực miền Bắc và miền Trung</categoriesString>
+        <fullAddress>99 Nguyễn Thị Minh KhaiQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N3PO17O/logo.png</image>
+    </place>
+    <place>
+        <name>Hero Sushi</name>
+        <categoriesString>Cơm, Món Nhật và Sushi</categoriesString>
+        <fullAddress>46/10/29 Nguyễn Cửu Vân , P.17Bình Thạnh Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N003N7O/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Nhà hàng Vietheritage</name>
+        <categoriesString>Cơm, Các món Việt khác, Phở-Mì-Bún</categoriesString>
+        <fullAddress>48A Võ Văn Tần, Phường 6Quận 3 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/QQ11O7O/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Yobin</name>
+        <categoriesString>Món tráng miệng</categoriesString>
+        <fullAddress>-Gò Vấp Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/Q1NR1QO/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Trùm Bún</name>
+        <categoriesString>Phở-Mì-Bún</categoriesString>
+        <fullAddress>59 Phú ChâuThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N03Q1RO/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Gelli Rau Câu 3D - 3D Jelly Cake</name>
+        <categoriesString>Bánh ngọt, Món tráng miệng</categoriesString>
+        <fullAddress>F2 Lê Thị Riêng, Phường Thới AnQuận 12 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NP3Q1RO/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Saint - Honore HCM</name>
+        <categoriesString>Món Pháp, Món Châu Âu</categoriesString>
+        <fullAddress>17 Trần Ngọc Diện, Phường Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NQQPO05/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Shawarma Express By Mad House</name>
+        <categoriesString>Món Trung Đông</categoriesString>
+        <fullAddress>6/1/2 Nguyễn Ư Dĩ, Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N17OQ05/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>The Juicery &amp; Smoothie</name>
+        <categoriesString>Sandwich, Sinh tố &amp;amp; Nước ép</categoriesString>
+        <fullAddress>8A Đường số 5, An PhúQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N3Q3Q15/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Quán Bò Cộng (Cow +)</name>
+        <categoriesString>Món Châu Âu, Món Châu Á khác, Trà sữa - Café</categoriesString>
+        <fullAddress>227 Nguyễn Duy Trinh, Phường Bình Trưng TâyQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N7N7QN5/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Sher-E-Punjab</name>
+        <categoriesString>Món Trung Đông, Món Ấn Độ</categoriesString>
+        <fullAddress>26-28-30 Thủ Khoa HuânQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N337QN5/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Uống Xanh</name>
+        <categoriesString>Món Khác</categoriesString>
+        <fullAddress>64 Trương Quyền, Phường 6Quận 3 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N17QR75/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Zeytun</name>
+        <categoriesString>Món Halal, Món Trung Đông, Món Thổ Nhĩ Kỳ</categoriesString>
+        <fullAddress>185 Bùi ViệnQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O075OQ5/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Mad Burger</name>
+        <categoriesString>Hamburger</categoriesString>
+        <fullAddress>6/1/2 Nguyễn Ư Dĩ, Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/ONON1R5/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Bánh Cuốn Tây Sơn</name>
+        <categoriesString>Các món Việt khác, Ẩm thực miền Bắc và miền Trung</categoriesString>
+        <fullAddress>44 Trương Công Định, Phường 14Tân Bình Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O1OQ5QP/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>DQ Grill &amp; Chill</name>
+        <categoriesString>Món Mỹ, Kem, Hamburger</categoriesString>
+        <fullAddress>Số 292 Võ Văn Ngân, Phường Bình Thọ, Quận Thủ ĐứcThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N111307/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>You Can House Coffee &amp; Milktea</name>
+        <categoriesString>Món ăn vặt, Trà sữa - Café, Sinh tố &amp;amp; Nước ép</categoriesString>
+        <fullAddress>Số 39, Đường 385, Phường Tân Nhơn Phú AQuận 9 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NO5NO07/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Ovenmaru Chicken</name>
+        <categoriesString>Món Hàn Quốc</categoriesString>
+        <fullAddress>187 Điện Biên Phủ, Đa KaoQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NRONP07/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Sữa Hạt MHouse</name>
+        <categoriesString>Thức uống khác</categoriesString>
+        <fullAddress>23/5/48 Đinh Tiên Hoàng, P.3Bình Thạnh Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NONQ707/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Nem Nướng Nha Trang Mr. Nem</name>
+        <categoriesString>Các món Việt khác</categoriesString>
+        <fullAddress>400 Cây Trâm, Phường 9Gò Vấp Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O315317/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Đặc Sản Quảng Ngãi Bé Mập</name>
+        <categoriesString>Các món Việt khác, Ẩm thực miền Bắc và miền Trung</categoriesString>
+        <fullAddress>Số 13 đường 385, P. Tăng Nhơn Phú AQuận 9 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OR10517/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Đặc Sản Tây Ninh Ngọc Hân - Signature Vietnamese Farmland</name>
+        <categoriesString>Các món Việt khác</categoriesString>
+        <fullAddress>B12, Vũ Huy Tấn, P.3Bình Thạnh Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/ON05ON7/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Golden Drinks</name>
+        <categoriesString>Sinh tố &amp;amp; Nước ép</categoriesString>
+        <fullAddress>23/5/48 Đinh Tiên Hoàng, Phường 3Bình Thạnh Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O05Q7N7/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Mr. Ken Philly Cheesesteak</name>
+        <categoriesString>Món Châu Âu</categoriesString>
+        <fullAddress>53/27/2 Trần Khánh Dư, Phường Tân ĐịnhQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NP07RN7/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>An Tâm Quán</name>
+        <categoriesString>Các món Việt khác, Phở-Mì-Bún</categoriesString>
+        <fullAddress>155 Đường D1, Phường 25Bình Thạnh Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NQR5N37/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Akiwi TeaTalk</name>
+        <categoriesString>Trà sữa - Café, Sinh tố &amp;amp; Nước ép</categoriesString>
+        <fullAddress>87A Đường Số 10, Phường Linh XuânThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N075337/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Grand Castella</name>
+        <categoriesString>Bánh ngọt</categoriesString>
+        <fullAddress>209 Phan Xích LongQuận Phú N Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N1P7O37/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Poke Bowl</name>
+        <categoriesString>Cơm, Món Nhật và Sushi, Salad</categoriesString>
+        <fullAddress>14A Hoà Mỹ, Phường Đa KaoQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NP3QO37/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>KFC</name>
+        <categoriesString>Món Mỹ, Hamburger</categoriesString>
+        <fullAddress>-- Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N5OPNO7/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Yuki Store 196</name>
+        <categoriesString>Các món Việt khác</categoriesString>
+        <fullAddress>451A/13 Phạm Thế Hiển, Phường 3Quận 8 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NNQQ5O7/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Bò Kho Siêu Ngon</name>
+        <categoriesString>Các món Việt khác</categoriesString>
+        <fullAddress>134 Trương Công Định, Phường 14Tân Bình Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N30R5O7/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>SSal Chicken &amp; Korean Restaurant Thủ Đức</name>
+        <categoriesString>Món Hàn Quốc</categoriesString>
+        <fullAddress>266 Võ Văn Ngân , Phường Bình Thọ, Quận Thủ ĐứcThủ Đức  Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NN7QRO7/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Sake Sushi</name>
+        <categoriesString>Cơm, Món Nhật và Sushi, Salad</categoriesString>
+        <fullAddress>46/10/29 Nguyễn Cửu Vân , P.17Bình Thạnh Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N310057/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Homemade Jaggery Cake</name>
+        <categoriesString>Bánh ngọt</categoriesString>
+        <fullAddress>32 Cô Bắc, P Cầu Ông LãnhQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NQ3ROP7/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Nếp Sài-Gòn</name>
+        <categoriesString>Thức uống khác</categoriesString>
+        <fullAddress>65/3c Hậu Lân, Bà ĐiểmQuận 12 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OQ3QN77/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Toco Toco</name>
+        <categoriesString>Trà sữa - Café</categoriesString>
+        <fullAddress>109 Hoàng Diệu 2Thủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O075377/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Thực Phẩm Dinh Dưỡng BAMBOO</name>
+        <categoriesString>Các món Việt khác</categoriesString>
+        <fullAddress>50/30 Phùng Văn Cung, Phường 7Phú Nhuận Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N135Q77/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Dream Tea</name>
+        <categoriesString>Trà sữa - Café</categoriesString>
+        <fullAddress>185 Hoàng Diệu 2,  Phường Linh TrungThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N1NPQ77/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Nha Trang Cuisine - Specialties Rolls &amp; Rice Noodle</name>
+        <categoriesString>Ẩm thực miền Bắc và miền Trung</categoriesString>
+        <fullAddress>Số 17 đường 45, Bình Trưng TâyQuận 2 Hồ Chí minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N1Q3RR7/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Khu Vườn Bánh Ngọt</name>
+        <categoriesString>Món ăn vặt, Bánh ngọt</categoriesString>
+        <fullAddress>Chung cư Sunview Town, 8 Đường Gò DưaThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NQON00Q/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Sweet House Cakes &amp; Pastries</name>
+        <categoriesString>Bánh ngọt</categoriesString>
+        <fullAddress>215D18A Nguyễn Văn Hưởng, P. Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NN7Q00Q/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Benaras, Restaurant &amp; Lounge</name>
+        <categoriesString>Món Ấn Độ</categoriesString>
+        <fullAddress>5A Nguyễn Siêu, Phường Bến NghéQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N1ONO0Q/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Bếp Sợi Thương - VietNamese Cuisine</name>
+        <categoriesString>Các món Việt khác, Món Ốc và hải sản</categoriesString>
+        <fullAddress>A23 – 02, Quốc lộ 50, Bình Hưng, Phường Bình ChánhQuận 8 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NRQOQ0Q/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>The Organic Juice - Légumes</name>
+        <categoriesString>Sinh tố &amp;amp; Nước ép</categoriesString>
+        <fullAddress>40 Nguyễn Cừ, Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N55QO1Q/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Nam An Market</name>
+        <categoriesString>Món Mỹ, Món Châu Âu</categoriesString>
+        <fullAddress>21 Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N51NQ1Q/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Gà Bó Xôi Ngon</name>
+        <categoriesString>Các món Việt khác, Bánh mì &amp;amp; Xôi</categoriesString>
+        <fullAddress>361 Lương Định CủaQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NRN10NQ/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Gà Không Lối Thoát Ngon</name>
+        <categoriesString>Các món Việt khác</categoriesString>
+        <fullAddress>268B Nguyễn Hoàng, Khu Phố 5, Phường An PhúQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NNR10NQ/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Quán Chay Nhà Tôi - My Home Vegeterian Restaurant</name>
+        <categoriesString>Món Chay</categoriesString>
+        <fullAddress>16 Trần Đình Xu, Phường Cô GiangQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N3330NQ/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Gà Bó Xôi, Gà nướng, Hấp, Nổ muối 1Ngon - All About Chicken</name>
+        <categoriesString>Các món Việt khác</categoriesString>
+        <fullAddress>62/6 Trung Lân, Bà Điểm, An SươngHóc Môn Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NOR05NQ/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Cua Ngon Hương Vị Đất Mũi - All about Crabs</name>
+        <categoriesString>Các món Việt khác, Món Ốc và hải sản</categoriesString>
+        <fullAddress>194D Đường Pasteur, Phường 6Quận 3 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N7P5PNQ/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Sữa Bắp Củ Mì</name>
+        <categoriesString>Thức uống khác</categoriesString>
+        <fullAddress>C21, Phạm Hữu Lầu, Phú MỹQuận 7 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NP3OPOQ/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Gà Nướng D'ron - D'ron BBQ Chicken</name>
+        <categoriesString>Cơm trưa văn phòng, Các món Việt khác, Món nướng BBQ</categoriesString>
+        <fullAddress>2 Trường SaBình Thạnh Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NQO737Q/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>R E Coffee</name>
+        <categoriesString>Các món Việt khác, Trà sữa - Café</categoriesString>
+        <fullAddress>78 Linh Đông, Phường Linh ĐôngThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N53057Q/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>The Rita House</name>
+        <categoriesString>Trà sữa - Café</categoriesString>
+        <fullAddress>11a Lý Đạo Thành, Phường 16Quận 8 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OP5O0RQ/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>FFV Cơm Văn Phòng - Chicken Rice</name>
+        <categoriesString>Cơm trưa văn phòng, Cơm</categoriesString>
+        <fullAddress>217 Lê Văn Lương, Phường Tân KiểngQuận 7 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N5QQNRQ/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Bún Thịt Nướng Dậu Dậu - Shop Online</name>
+        <categoriesString>Món ăn vặt</categoriesString>
+        <fullAddress>207/30/6 Thạnh Xuân 24, Tổ 23, Khu phố 7,  Phường Thạnh XuânQuận 12 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N50170R/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Cococake</name>
+        <categoriesString>Bánh ngọt</categoriesString>
+        <fullAddress>279/22 Huỳnh Văn Bánh, Phường 11Phú Nhuận Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N53071R/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Rượu Vang Hàng Đầu Châu Âu - CH 1933</name>
+        <categoriesString>Thức uống khác</categoriesString>
+        <fullAddress>115 Hai Bà Trưng, Phường Bến NghéQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/NO0R1NR/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Lush Burger</name>
+        <categoriesString>Hamburger</categoriesString>
+        <fullAddress>Lầu 02, 194 Lê Thánh TônQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O755ONR/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Master's Bread - Bánh Mì Việt Nam</name>
+        <categoriesString>Bánh mì &amp;amp; Xôi</categoriesString>
+        <fullAddress>The Vista – 628C Xa Lộ Hà Nội, Phường An PhúQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O135PNR/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Tuktuk Thai Bistro</name>
+        <categoriesString>Món Thái Lan</categoriesString>
+        <fullAddress>19 Trần Ngọc Diện, Phường Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/ON0P33R/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Blue Poke</name>
+        <categoriesString>Món Nhật và Sushi, Salad</categoriesString>
+        <fullAddress>2 Hòa Mỹ, Phường ĐakaoQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OQ15P3R/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Healthy Collection</name>
+        <categoriesString>Món Chay</categoriesString>
+        <fullAddress>Aeon Mall Tân Phú, 30 Bờ Bao Tân Thắng, Sơn KýTân Phú Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N177ROR/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>La Maison - International Fine Meats</name>
+        <categoriesString>Món Mỹ, Món Châu Âu</categoriesString>
+        <fullAddress>235 Nguyễn Văn Hưởng, Phường Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N53155R/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Viking Steak</name>
+        <categoriesString>Món ăn vặt, Món Hàn Quốc</categoriesString>
+        <fullAddress>58 Đặng Văn Bi, phường Bình ThọThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N37OP5R/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>True Cake</name>
+        <categoriesString>Bánh ngọt</categoriesString>
+        <fullAddress>33/31 Quốc Hương, Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/N7ROR5R/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Cô Ba Quán</name>
+        <categoriesString>Các món Việt khác</categoriesString>
+        <fullAddress>27 Nguyễn Văn Lạc, Phường 21Bình Thạnh Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/ORRO1RR/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>T'aroma Premium Coffee &amp; Milk Tea</name>
+        <categoriesString>Trà sữa - Café, Sinh tố &amp;amp; Nước ép</categoriesString>
+        <fullAddress>60C Quang Trung, Phường Tăng Nhơn Phú BQuận 9 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OO151RR/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>The Sushi 'N Salads</name>
+        <categoriesString>Cơm trưa văn phòng, Món Nhật và Sushi, Salad</categoriesString>
+        <fullAddress>Pico Plaza, 20 Cộng Hòa, Phường 12Tân Bình Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O0RPNRR/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Gạch Ống Food &amp; Beer</name>
+        <categoriesString>Các món Việt khác</categoriesString>
+        <fullAddress>11 Nguyễn Văn Bá, Bình ThọThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OQPRPRR/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Sushi T&amp;T Thủ Đức</name>
+        <categoriesString>Món Nhật và Sushi</categoriesString>
+        <fullAddress>41 Hàn Thuyên, Phường Bình ThọThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OQR1QRR/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>JuiceTell Store</name>
+        <categoriesString>Sinh tố &amp;amp; Nước ép</categoriesString>
+        <fullAddress>88 Song Hành, Phường An PhúQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OP1NQRR/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Thy - Trà Sữa Đường Phố</name>
+        <categoriesString>Trà sữa - Café</categoriesString>
+        <fullAddress>258 Hoàng Diệu 2, phường Linh ChiểuThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OP71RRR/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Lẩu Gà Ớt Hiểm A Long</name>
+        <categoriesString>Các món Việt khác</categoriesString>
+        <fullAddress>335 Lương Định Của, phường An PhúQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O0N50001/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>MAMA Coffee &amp; Halal Restaurant</name>
+        <categoriesString>Món Halal, Món Ấn Độ, Trà sữa - Café</categoriesString>
+        <fullAddress>28 Bát Nàn, Phường Thạnh Mỹ LợiQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OQQ7N001/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Cua Tốc Độ</name>
+        <categoriesString>Các món Việt khác, Món Ốc và hải sản</categoriesString>
+        <fullAddress>1162 Phạm Văn Đồng, Phường Linh ĐôngThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O1R7N001/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>.NiceMeal.Hi</name>
+        <categoriesString>Sandwich, Hamburger, Italian &amp;amp; Pizza</categoriesString>
+        <fullAddress>92, Đường 41, Phường Tân PhongQuận 7 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O30QN001/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Gà Muối Xông Khói - Evergreenfood</name>
+        <categoriesString>Các món Việt khác</categoriesString>
+        <fullAddress>166 Bàn Cờ, Phường 3Quận 3 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O00OR001/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Lephong Bakery</name>
+        <categoriesString>Bánh ngọt</categoriesString>
+        <fullAddress>463B/36C Cách Mạng Tháng 8, phường 13Quận 10 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OQ7OR001/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Sườn Nướng Wakamaya</name>
+        <categoriesString>Món nướng BBQ</categoriesString>
+        <fullAddress>3/2 Đường Số 6, Phường Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OQ1O3301/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Cô Quyên Xứ Quảng</name>
+        <categoriesString>Phở-Mì-Bún</categoriesString>
+        <fullAddress>Quầy 8 – Tầng 3 Asian Food Trung tâm Gigamall Thủ Đức 240-242 Phạm Văn Đồng, Phường Hiệp Bình ChánhThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OPNO7301/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Ẩm Thực Vua Hàu</name>
+        <categoriesString>Món Ốc và hải sản</categoriesString>
+        <fullAddress>61 Trần Hưng Đạo, Phường Hiệp PhúQuận 9 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/ONNOQ301/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Khoai Hachi</name>
+        <categoriesString>Món ăn vặt</categoriesString>
+        <fullAddress>3/2 Đường Số 6, Phường Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O575Q301/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Kaori Ocha</name>
+        <categoriesString>Trà sữa - Café, Sinh tố &amp;amp; Nước ép</categoriesString>
+        <fullAddress>212A Lâm Văn Bền, Phường Tân QuyQuận 7 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OOQ5Q301/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Goocfood - Sushi &amp; Sashimi</name>
+        <categoriesString>Món Nhật và Sushi</categoriesString>
+        <fullAddress>15/1 Đường Số 13, Phường Bình AnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OON0RO01/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Naked Cow</name>
+        <categoriesString>Món Châu Âu</categoriesString>
+        <fullAddress>13/1 Đường Số 11, Phường Linh ChiểuThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OO5RN501/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Grilled Chicken Gà Nướng Cái Bang</name>
+        <categoriesString>Các món Việt khác, Bánh mì &amp;amp; Xôi</categoriesString>
+        <fullAddress>148/2 Bàu Cát 1, Phường 12Tân Bình Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O0N15501/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Viet On The Fly</name>
+        <categoriesString>Món Châu Á khác</categoriesString>
+        <fullAddress>240-242 Phạm Văn Đồng, phường Hiệp Bình ChánhThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O0O1P501/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Baked Potato (Jacket Potato)</name>
+        <categoriesString>Món Mỹ, Món Châu Âu, Sinh tố &amp;amp; Nước ép</categoriesString>
+        <fullAddress>8A Đường số 5, An PhúQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O11RP501/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Salad Station</name>
+        <categoriesString>Salad</categoriesString>
+        <fullAddress>Tầng 2, Tòa Nhà Viettel 285, Cách Mạng Tháng 8, Phường 12Quận 10 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OPR77501/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Cháo Ếch Singapore- Victory Café</name>
+        <categoriesString>Cơm, Trà sữa - Café</categoriesString>
+        <fullAddress>240-242 Phạm Văn Đồng, Phường Hiệp Bình ChánhThủ Đức Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OR0PQ501/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Queen Vegetarian Snacks - Ăn Vặt Chay Nữ Hoàng</name>
+        <categoriesString>Món ăn vặt, Món Chay, Ẩm thực miền Bắc và miền Trung</categoriesString>
+        <fullAddress>21/28 Tự Lập, Phường 4Tân Bình Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O500R501/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Sushi Deli</name>
+        <categoriesString>Món Nhật và Sushi</categoriesString>
+        <fullAddress>26A Lò Siêu, Phường 16, Quận 11Quận 11 Ho Chi Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O0O03P01/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Bread&amp;Butter HCM Sourdough Breads &amp; Deli Sandwiches</name>
+        <categoriesString>Sandwich, Món Châu Âu, Hamburger</categoriesString>
+        <fullAddress>14E31 Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O5PQ3P01/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>The Mup Cake</name>
+        <categoriesString>Bánh ngọt, Món tráng miệng</categoriesString>
+        <fullAddress>155/40C Xô Viết Nghệ Tĩnh, Phường17Bình Thạnh Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O1P75P01/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>NgonNgon Bakery</name>
+        <categoriesString>Bánh ngọt, Món tráng miệng</categoriesString>
+        <fullAddress>228 Phan Văn Hân, Phường 17Bình Thạnh Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O001PP01/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Yang Cha Việt Nam</name>
+        <categoriesString>Thức uống khác, Trà sữa - Café</categoriesString>
+        <fullAddress>228 Phan Văn Hân, Phường 17Bình Thạnh Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O0RP7P01/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Pou Pizza</name>
+        <categoriesString>Italian &amp;amp; Pizza</categoriesString>
+        <fullAddress>Số 13, Đường 85, Phường Hiệp PhúQuận 9 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O773QP01/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Ritaki - Roasted Sweet Potato</name>
+        <categoriesString>Món ăn vặt, Các món Việt khác</categoriesString>
+        <fullAddress>124/22 Nguyễn Văn Cừ, Phường Nguyễn Cư TrinhQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O755QP01/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Grand Sushi KO Quận 2</name>
+        <categoriesString>Món Nhật và Sushi</categoriesString>
+        <fullAddress>94 Xuân Thủy, Phường Thảo ĐiềnQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O71O0701/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Bánh Kem Minh Xuân</name>
+        <categoriesString>Bánh ngọt</categoriesString>
+        <fullAddress>12 Phạm Văn Bạch, phường 15Tân Bình Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O5330Q01/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>BSdeli</name>
+        <categoriesString>Món Nhật và Sushi</categoriesString>
+        <fullAddress>Số 1 Đoàn KếtTân Phú Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O73Q0011/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>The Black Banh - Gourmet Burgers &amp; Fried Chicken</name>
+        <categoriesString>Món ăn vặt, Món Mỹ, Món Châu Âu</categoriesString>
+        <fullAddress>35 Võ Trường Toản, Phường An PhúQuận 2 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OR7O3111/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Thế Giới Bánh Kem</name>
+        <categoriesString>Bánh ngọt</categoriesString>
+        <fullAddress>581/47 Trường Chinh, Phường Tân Sơn NhiTân Phú Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/O3Q1Q111/logo_465x320.png</image>
+    </place>
+    <place>
+        <name>Spice Garden Indian Restaurant</name>
+        <categoriesString>Món Ấn Độ</categoriesString>
+        <fullAddress>5H Tôn Đức Thắng, Phường Bến NghéQuận 1 Hồ Chí Minh</fullAddress>
+        <image>//static.vietnammm.com/images/restaurants/vn/OP7QON11/logo_465x320.png</image>
+    </place>
+</places>
