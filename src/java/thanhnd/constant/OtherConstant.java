@@ -10,5 +10,4 @@ package thanhnd.constant;
  * @author thanh
  */
 public class OtherConstant {
-    
 }

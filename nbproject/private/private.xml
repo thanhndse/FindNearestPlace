@@ -3,14 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/web/WEB-INF/pasgo/123.xml</file>
-            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/build/web/WEB-INF/vietnammm/vietnammm-input.xml</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/entity/Category.java</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/utils/JsonUtils.java</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/helper/googleapi/GoogleAPIData.java</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/hibernate.cfg.xml</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/dto/PlaceCrawlDto.java</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/helper/crawler/UltimateURIResolver.java</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/helper/googleapi/Candidate.java</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/servlet/CrawlServlet.java</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/helper/googleapi/Geometry.java</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/entity/Place.java</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/entity/User.java</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/web/WEB-INF/pasgo/fullDoc.xml</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/helper/googleapi/Location.java</file>
             <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/Test.java</file>
-            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/web/WEB-INF/vietnammm/vietnammm-input.xml</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/constant/FileConstant.java</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/utils/GoogleAPIUtils.java</file>
             <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/service/CrawlService.java</file>
-            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/web/WEB-INF/vietnammm/vietnammm-main.xsl</file>
-            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/build/web/WEB-INF/vietnammm/vietnammm-output.xml</file>
-            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/build/web/WEB-INF/vietnammm/vietnammm-main.xsl</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/constant/OtherConstant.java</file>
         </group>
     </open-files>
 </project-private>

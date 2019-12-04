@@ -18,6 +18,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.logging.Level;
@@ -42,8 +43,11 @@ import thanhnd.constant.FileConstant;
 import thanhnd.dto.PlaceCrawlDto;
 import thanhnd.entity.Category;
 import thanhnd.entity.Place;
+import thanhnd.helper.googleapi.Candidate;
+import thanhnd.helper.googleapi.GoogleAPIData;
 import thanhnd.repository.CategoryRepository;
 import thanhnd.repository.PlaceRepository;
+import thanhnd.utils.GoogleAPIUtils;
 import thanhnd.utils.StaxUtils;
 import thanhnd.utils.TrAXUtils;
 
@@ -122,23 +126,32 @@ public class CrawlService {
         }
     }
 
-    public void crawlVietnammm(boolean fromFile) {
-
-    }
-
     public void saveToDb(List<PlaceCrawlDto> placeCrawlDtos) {
+
         placeCrawlDtos.stream().forEach(dto -> {
             if (!isPlaceExisted(dto.getName())) {
-                Place place = new Place();
-                place.setName(dto.getName());
-                place.setFullAddress(dto.getFullAddress());
-                place.setImage(dto.getImage());
-                for (String categoryString : dto.getCategoriesStringSet()) {
-                    Category category = convertStringToCategory(categoryString);
-                    place.addCategory(category);
+                GoogleAPIData googleAPIData = GoogleAPIUtils.getGoogleAPIData(dto.getFullAddress());
+                if (googleAPIData.getStatus().equals("OK")) {
+                    Place place = new Place();
+                    place.setName(dto.getName());
+                    place.setFullAddress(dto.getFullAddress());
+                    place.setImage(dto.getImage());
+
+                    Candidate candidatePlace = googleAPIData.getCandidates().get(0);
+                    place.setFullAddressFormatted(candidatePlace.getFormatted_address());
+                    place.setLatitude(candidatePlace.getGeometry().getLocation().getLat());
+                    place.setLongitude(candidatePlace.getGeometry().getLocation().getLng());
+                    System.out.println("change success: " + place.getFullAddressFormatted());
+
+                    for (String categoryString : dto.getCategoriesStringSet()) {
+                        Category category = convertStringToCategory(categoryString);
+                        place.addCategory(category);
+                    }
+                    System.out.println("save place " + place.getName());
+                    placeRepository.save(place);
+                } else {
+                    System.out.println("Status: " + googleAPIData.getStatus());
                 }
-                System.out.println("save place " + place.getName());
-                placeRepository.save(place);
             }
         });
     }
@@ -176,7 +189,7 @@ public class CrawlService {
                     if (categoriesString != null) {
                         String[] categoriesStringArray = categoriesString.split(",|(và)");
                         HashSet<String> categoriesStringSet = new HashSet<>();
-                        for (String category: categoriesStringArray){
+                        for (String category : categoriesStringArray) {
                             categoriesStringSet.add(category.trim());
                         }
                         placeCrawlDto.setCategoriesStringSet(categoriesStringSet);

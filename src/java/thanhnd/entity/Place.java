@@ -35,6 +35,7 @@ public class Place implements Serializable {
     private String district;
     private String street;
     private String fullAddress;
+    private String fullAddressFormatted;
     private double latitude;
     private double longitude;
     
@@ -133,4 +134,14 @@ public class Place implements Serializable {
     public List<Category> getCategories() {
         return categories;
     }
+
+    public String getFullAddressFormatted() {
+        return fullAddressFormatted;
+    }
+
+    public void setFullAddressFormatted(String fullAddressFormatted) {
+        this.fullAddressFormatted = fullAddressFormatted;
+    }
+    
+    
 }

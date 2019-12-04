@@ -15,7 +15,7 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
-import thanhnd.crawler.UltimateURIResolver;
+import thanhnd.helper.crawler.UltimateURIResolver;
 
 /**
  *

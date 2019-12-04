@@ -17,9 +17,13 @@
          <!--Set the current session context--> 
         <property name="current_session_context_class">thread</property>
         
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        
         <!--mapping-->
         <mapping class="thanhnd.entity.Category"/>
         <mapping class="thanhnd.entity.Place"/>
         <mapping class="thanhnd.entity.User"/>
+        
+        
     </session-factory>
 </hibernate-configuration>

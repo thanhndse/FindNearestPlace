@@ -1,4 +1,4 @@
-package thanhnd.crawler;
+package thanhnd.helper.crawler;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
