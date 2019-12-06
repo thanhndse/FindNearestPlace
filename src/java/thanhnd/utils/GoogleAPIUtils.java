@@ -25,7 +25,7 @@ public class GoogleAPIUtils {
             ObjectMapper mapper = new ObjectMapper();
             String url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input="
                     + URLEncoder.encode(rawAddress, "UTF-8")
-                    + "&inputtype=textquery&fields=formatted_address,name,geometry&key=AIzaSyC7qNZAW3LzFA2k1AxTtT7izMbKFwBAQKk";
+                    + "&inputtype=textquery&fields=formatted_address,name,geometry&key=AIzaSyDpl8lxu_ioB1OrUMrboA1lFbkrXrHx7u4";
             return mapper.readValue(new URL(url), GoogleAPIData.class);
         } catch (IOException ex) {
             Logger.getLogger(GoogleAPIUtils.class.getName()).log(Level.SEVERE, null, ex);

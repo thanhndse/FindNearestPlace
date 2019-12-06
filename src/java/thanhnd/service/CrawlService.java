@@ -129,7 +129,8 @@ public class CrawlService {
     public void saveToDb(List<PlaceCrawlDto> placeCrawlDtos) {
 
         placeCrawlDtos.stream().forEach(dto -> {
-            if (!isPlaceExisted(dto.getName())) {
+            Optional<Place> optionalPlace = findPlaceByNameAndAddress(dto.getName(), dto.getFullAddress());
+            if (!optionalPlace.isPresent()) {
                 GoogleAPIData googleAPIData = GoogleAPIUtils.getGoogleAPIData(dto.getFullAddress());
                 if (googleAPIData.getStatus().equals("OK")) {
                     Place place = new Place();
@@ -152,6 +153,12 @@ public class CrawlService {
                 } else {
                     System.out.println("Status: " + googleAPIData.getStatus());
                 }
+            } else {
+                Place place = optionalPlace.get();
+                if (!place.getImage().equals(dto.getImage())) {
+                    place.setImage(dto.getImage());
+                    placeRepository.save(place);
+                }
             }
         });
     }
@@ -165,8 +172,8 @@ public class CrawlService {
         }
     }
 
-    private boolean isPlaceExisted(String name) {
-        return placeRepository.isPlaceExistedByName(name);
+    private Optional<Place> findPlaceByNameAndAddress(String name, String fullAddress) {
+        return placeRepository.findByNameAndAddress(name, fullAddress);
     }
 
     private List<PlaceCrawlDto> parseDataByStAX(InputStream is) throws XMLStreamException {

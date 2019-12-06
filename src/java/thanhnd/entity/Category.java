@@ -16,6 +16,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -23,6 +25,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Category")
+@XmlRootElement
 public class Category implements Serializable {
 
     @Id
@@ -57,6 +60,7 @@ public class Category implements Serializable {
         this.name = name;
     }
 
+    @XmlTransient
     public List<Place> getPlaces() {
         return places;
     }

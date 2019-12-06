@@ -6,6 +6,7 @@
 package thanhnd.repository;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Optional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -33,5 +34,13 @@ public class CategoryRepository implements Serializable{
                 .findFirst();
         session.getTransaction().commit();
         return optionalCategory;
+    }
+
+    public List<Category> getAllCategories() {
+        session.beginTransaction();
+        List<Category> categories = session.createQuery("from Category")
+                .getResultList();
+        session.getTransaction().commit();
+        return categories;
     }
 }

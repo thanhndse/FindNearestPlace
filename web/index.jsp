@@ -13,6 +13,9 @@
         <title>Nearest place</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/nearestPlace.css">
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkyK25oTRJKpEhmHiHOuaB_nPg_oUo8-Y
+        &libraries=places,geometry"></script>
+
     </head>
     <body>
         <div class="container">
@@ -37,48 +40,155 @@
                 </div>
             </nav>
             <div class="d-flex justify-content-between">
-                <div>
+                <div style="width: 45%">
                     <h5>Hello, <span style="color: background">${sessionScope.user.name}</span> </h5>
 
                     <div class="mt-3">
                         <h3 class="mt-2">Make your friends closer</h3>
                         <div class="form-group mr-2 mb-2">
-                            <label for="inputPassword2" class="sr-only">Address</label>
-                            <input size="50" type="text" class="form-control input-address" id="inputAddress" placeholder="Input address">
+                            <input size="50" type="text" class="form-control input-address" id="pac-input" placeholder="Input address">
                         </div>
-                        <button type="submit" class="btn btn-primary">Add</button>
                     </div>
 
-                    <div class="mt-3">
-                        <span>Your places: </span><br>
-                        <div class="list-address mb-2">
-                            <ul class="list-group">
-                                <li class="list-group-item py-1">Chung cư Thới An, Lê Thị Riêng, Quận 12</li>
-                                <li class="list-group-item py-1">Trường đại học ngoại thương</li>
-                            </ul>
-                        </div>
-                        <button type="submit" class="btn btn-primary mb-2">Remove</button>
-                        <button type="submit" class="btn btn-primary mb-2">Clear All</button>
+                    <div class="mt-3 mb-3">
+                        <span>Your places: </span>
+                        <ul class="list-group mb-3" id="ul-list-address" style="width: 100%">
+                        </ul>
+                        <button type="submit" class="btn btn-primary mb-2" onclick="clearAllAddresses()">Clear All</button>
                     </div>
 
                     <div class="mt-3">
                         <span>Where do you want to go? </span><br>
                         <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                            <option selected>Choose your category</option>
-                            <option value="1">Coffee</option>
-                            <option value="2">Food</option>
-                            <option value="3">Milk tea</option>
+                            <option selected value="0">Tất cả</option>
+                            <c:forEach var="category" items="${requestScope.categories}">
+                                <option value="1">${category.name}</option>
+                            </c:forEach>
                         </select>
                         <button type="submit" class="btn btn-primary mt-2">Find places</button>
                     </div>
 
                 </div>
-                <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.6056895740307!2d106.80763811450237!3d10.84145749227741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752731176b07b1%3A0xb752b24b379bae5e!2zxJDhuqFpIGjhu41jIEZQVCBUUCBIQ00!5e0!3m2!1sen!2s!4v1574607107358!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-                </div>
+                <div id="map" style="height: 500px; background: red; width: 55%"></div>
             </div>
 
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+        <script>
+            var autocomplete;
+            var map;
+            var addresses = [];
+            var markers = [];
+
+            google.maps.event.addDomListener(window, 'load', initialize);
+            initMap();
+
+            function initialize() {
+                var input = document.getElementById('pac-input');
+                autocomplete = new google.maps.places.Autocomplete(input);
+                autocomplete.addListener('place_changed', changePlaceListener)
+            }
+
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 13,
+                    center: {lat: 10.841508, lng: 106.809628}
+                });
+//                marker.addListener('click', toggleBounce);
+            }
+
+            
+            function changePlaceListener() {
+                var input = document.getElementById('pac-input');
+                // get info
+                var place = autocomplete.getPlace();
+                var location = place.geometry.location;
+
+                // add location
+                var addressInfo = {name: place.formatted_address, lat: location.lat(), lng: location.lng()};
+                addresses.push(addressInfo);
+
+                //clear input
+                input.value = "";
+
+                //load address and marker
+                updateAddressesAndMarker();
+
+            }
+
+            function updateAddressesAndMarker() {
+                
+                //revove all addresses
+                var ulAddresses = document.getElementById("ul-list-address");
+                ulAddresses.innerHTML = "";
+                
+                //remove all markers
+                for (var i = 0; i < markers.length; i++) {
+                    markers[i].setMap(null);
+                }
+                markers.length = 0;
+                
+                // add new address and marker
+                for (var i = 0; i < addresses.length; i++) {
+                    var address = addresses[i];
+                    addNewLiAddress(ulAddresses, address.name);
+                    createMarker(address.lat, address.lng);
+                }
+            }
+            
+            function addNewLiAddress(ulAddresses, name){
+                var liAddress = document.createElement("li");
+                liAddress.setAttribute("class", "list-group-item py-1");
+
+                // add address content
+                var spanAddress = document.createElement("span");
+                spanAddress.innerHTML = name;
+                liAddress.appendChild(spanAddress);
+
+                // add space
+                var spanSpace = document.createElement("span");
+                spanSpace.innerHTML = " ";
+                liAddress.appendChild(spanSpace);
+
+                // add remove button
+                var removeButtion = document.createElement("button");
+                removeButtion.innerHTML = "Remove";
+                liAddress.appendChild(removeButtion);
+                removeButtion.addEventListener("click", removeAddress);
+
+                ulAddresses.appendChild(liAddress);
+            }
+            
+            function createMarker(lat, lng) {
+                var marker = new google.maps.Marker({
+                    map: map,
+                    draggable: true,
+                    animation: google.maps.Animation.DROP,
+                    position: {lat: lat, lng: lng}
+                });
+                map.setCenter(new google.maps.LatLng(lat, lng));
+                markers.push(marker);
+            }
+            function removeAddress(e){
+                var button = e.target;
+                var address = button.parentElement.childNodes[0].innerHTML;
+                for (var i = 0; i < addresses.length; i++){
+                    if (addresses[i].name === address){
+                        addresses.splice(i,1);
+                    }
+                }
+                updateAddressesAndMarker();
+            }
+            
+            function clearAllAddresses(){
+                addresses = [];
+                updateAddressesAndMarker();
+            }
+
+        </script>
+        <!--        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkyK25oTRJKpEhmHiHOuaB_nPg_oUo8-Y&libraries=places,geometry"
+                async defer></script>-->
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

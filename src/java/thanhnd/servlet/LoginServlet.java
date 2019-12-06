@@ -7,13 +7,19 @@ package thanhnd.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.hibernate.Session;
+import thanhnd.entity.Category;
 import thanhnd.entity.User;
+import thanhnd.service.CategoryService;
 import thanhnd.service.UserService;
+import thanhnd.utils.HibernateUtil;
 
 /**
  *
@@ -37,18 +43,27 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
+        
+        Session hibernateSession = HibernateUtil.getSessionFactory().openSession();
+        HttpSession session = request.getSession();
+        UserService userService = new UserService();
+        CategoryService categoryService = new CategoryService(hibernateSession);
+        
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        UserService userService = new UserService();
-        HttpSession session = request.getSession();
+        
+        
         String url = invaidPage;
         try {
             User user = userService.findByUsernameAndPassword(username, password);
             if (user != null) {
                 if (user.getRole().equals("user")) {
-                    session.setAttribute("user", user);
                     url = indexPage;
+                    
+                    session.setAttribute("user", user);
+                    List<Category> categories = categoryService.getAllCategories();
+                    request.setAttribute("categories", categories);
+                    
                 }
                 else if (user.getRole().equals("admin")) {
                     session.setAttribute("user", user);
@@ -57,8 +72,9 @@ public class LoginServlet extends HttpServlet {
 
             }
         } finally {
-            response.sendRedirect(url);
-            out.close();
+            RequestDispatcher rd = request.getRequestDispatcher(url);
+            rd.forward(request, response);
+//            response.sendRedirect(url);
         }
     }
 

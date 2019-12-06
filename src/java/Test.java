@@ -1,22 +1,8 @@
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.json.JSONException;
-import org.json.JSONObject;
-import thanhnd.checker.XmlSyntaxChecker;
 import thanhnd.helper.argorithm.Point;
 import thanhnd.helper.argorithm.WeiszfeldCalculator;
-import thanhnd.repository.CategoryRepository;
-import thanhnd.utils.HibernateUtil;
-import thanhnd.utils.HttpUtils;
-import thanhnd.utils.JsonUtils;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -49,12 +35,16 @@ public class Test {
 //        } catch (JSONException ex) {
 //            Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);
 //        }
-        List<Point> points = new ArrayList<>();
-        points.add(new Point(2, 3));
-        points.add(new Point(2, 4));
-        points.add(new Point(3, 2));
-        points.add(new Point(8, 5));
-        WeiszfeldCalculator weiszfeldCalculator = new WeiszfeldCalculator(points);
-        System.out.println(weiszfeldCalculator.getGeometricMedianPoint().getX() + ", " + weiszfeldCalculator.getGeometricMedianPoint().getY());
+//        List<Point> points = new ArrayList<>();
+//        points.add(new Point(2, 3));
+//        points.add(new Point(2, 4));
+//        points.add(new Point(3, 2));
+//        points.add(new Point(20, 5));
+//        WeiszfeldCalculator weiszfeldCalculator = new WeiszfeldCalculator(points);
+//        System.out.println(weiszfeldCalculator.getGeometricMedianPoint().getX() + ", " + weiszfeldCalculator.getGeometricMedianPoint().getY());
+//    
+        Point point1 = new Point(10.804402, 106.790274);
+        Point point2 = new Point(10.841226, 106.810052);
+        System.out.println(point1.calculateDistanceInReal(point2));
     }
 }

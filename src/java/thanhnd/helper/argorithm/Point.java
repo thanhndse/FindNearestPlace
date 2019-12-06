@@ -41,4 +41,23 @@ public class Point {
         return Math.sqrt((this.getX() - otherPoint.getX()) * (this.getX() - otherPoint.getX()) + (this.getY() - otherPoint.getY()) * (this.getY() - otherPoint.getY()));
     }
     
+    //find real distance in meter with x is latitude and y is longitude with Haversine formula
+    public double calculateDistanceInReal(Point point){
+        int r = 6371;
+        double latitude1 = Math.toRadians(getX());
+        double latitude2 = Math.toRadians(point.getX());
+        double deltaLatitude = Math.toRadians(getX() - point.getX());
+        double deltaLongitude = Math.toRadians(getY() - point.getY());
+        
+        double a = Math.sin(deltaLatitude/2) * Math.sin(deltaLatitude/2)
+                + Math.cos(latitude1) * Math.cos(latitude2)
+                * Math.sin(deltaLongitude/2) * Math.sin(deltaLongitude/2);
+        
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        
+        double d = r * c;
+        
+        return d;
+    }
+    
 }

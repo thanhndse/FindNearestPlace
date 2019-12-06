@@ -18,6 +18,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 /**
  *
@@ -25,15 +27,13 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Place")
+@XmlRootElement
 public class Place implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private String image;
-    private String city;
-    private String district;
-    private String street;
     private String fullAddress;
     private String fullAddressFormatted;
     private double latitude;
@@ -69,30 +69,6 @@ public class Place implements Serializable {
 
     public void setImage(String image) {
         this.image = image;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getDistrict() {
-        return district;
-    }
-
-    public void setDistrict(String district) {
-        this.district = district;
-    }
-
-    public String getStreet() {
-        return street;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
     }
 
     public String getFullAddress() {
@@ -142,6 +118,11 @@ public class Place implements Serializable {
     public void setFullAddressFormatted(String fullAddressFormatted) {
         this.fullAddressFormatted = fullAddressFormatted;
     }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
+    }
+    
     
     
 }

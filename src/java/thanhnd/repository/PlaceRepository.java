@@ -5,9 +5,13 @@
  */
 package thanhnd.repository;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import org.hibernate.Session;
+import thanhnd.entity.Category;
 import thanhnd.entity.Place;
+import thanhnd.helper.argorithm.Point;
 import thanhnd.utils.HibernateUtil;
 
 /**
@@ -51,5 +55,42 @@ public class PlaceRepository {
                 .findAny().isPresent();
         session.getTransaction().commit();
         return result;
+    }
+
+    public Optional<Place> findByNameAndAddress(String name, String fullAddress) {
+        session.beginTransaction();
+        Optional<Place> optionalPlace = session.createQuery("from Place where name = :name and fullAddress = :fullAddress")
+                .setParameter("name", name)
+                .setParameter("fullAddress", fullAddress)
+                .getResultStream()
+                .findFirst();
+        session.getTransaction().commit();
+        return optionalPlace;
+    }
+
+    public List<Place> findAll() {
+        session.beginTransaction();
+        List<Place> places = session.createQuery("from Place").getResultList();
+        session.getTransaction().commit();
+        return places;
+    }
+
+    public List<Place> findByDistanceSmallerThanWithCategory(double magicPointX, double magicPointY, double radius, Category category) {
+        session.beginTransaction();
+        
+        List<Place> rawPlaces = session.createQuery("from Place p where :category MEMBER OF p.categories")
+                .setParameter("category", category)
+                .getResultList();
+        List<Place> resultPlaces = new ArrayList<>();
+        Point magicPoint = new Point(magicPointX, magicPointY);
+        for (Place place : rawPlaces) {
+            Point point = new Point(place.getLatitude(), place.getLongitude());
+            double distance = point.calculateDistanceInReal(magicPoint);
+            if (distance <= radius) {
+                resultPlaces.add(place);
+            }
+        }
+        session.getTransaction().commit();
+        return resultPlaces;
     }
 }

@@ -16,8 +16,8 @@ public class WeiszfeldCalculator {
     private final List<Point> memberPoints;
     private Point currentPoint;
     private Point geometricMedianPoint;
-    
-    private final double epsilon = 0.01;
+
+    private final double epsilon = 0.000000000001;
 
     public WeiszfeldCalculator(List<Point> memberPoints) {
         this.memberPoints = memberPoints;
@@ -33,28 +33,36 @@ public class WeiszfeldCalculator {
             double previousDistance;
             double afterDistance;
             //loop until differrence about distances between 2 time is smaller than epsilon
+            boolean shouldContinue;
+//            int count = 0;
             do {
+//                count++;
+//                System.out.println("Loop number: " + count);
                 previousDistance = getCurrentTotalDistance();
                 double sum1X = 0;
                 double sum1Y = 0;
                 double sum2 = 0;
-                for (Point memberPoint: memberPoints){
+                for (Point memberPoint : memberPoints) {
                     double distance = currentPoint.calculateDistance(memberPoint);
-                    if (distance == 0){
+                    if (distance == 0) {
                         break;
-                    }
-                    else {
-                        sum2 += 1.0/distance;
-                        sum1X += memberPoint.getX()/distance;
-                        sum1Y += memberPoint.getY()/distance;
+                    } else {
+                        sum2 += 1.0 / distance;
+                        sum1X += memberPoint.getX() / distance;
+                        sum1Y += memberPoint.getY() / distance;
+                        currentPoint.setX(sum1X / sum2);
+                        currentPoint.setY(sum1Y / sum2);
                     }
                 }
-                currentPoint.setX(sum1X/sum2);
-                currentPoint.setY(sum1Y/sum2);
+
                 afterDistance = getCurrentTotalDistance();
-            } while (previousDistance - afterDistance <= epsilon);
+                shouldContinue = (previousDistance - afterDistance) > epsilon;
+//                System.out.println("Previous distance: " + previousDistance);
+//                System.out.println("After distance: " + afterDistance);
+//                System.out.println("Difference: " + (previousDistance - afterDistance));
+            } while (shouldContinue);
             geometricMedianPoint = currentPoint;
-        } 
+        }
         return geometricMedianPoint;
     }
 
@@ -65,7 +73,7 @@ public class WeiszfeldCalculator {
         double sumY = 0;
         for (Point point : memberPoints) {
             sumX += point.getX();
-            sumX += point.getY();
+            sumY += point.getY();
         }
         return new Point(sumX / memberPoints.size(), sumY / memberPoints.size());
     }
@@ -77,6 +85,5 @@ public class WeiszfeldCalculator {
         }
         return sum;
     }
-    
-     
+
 }
