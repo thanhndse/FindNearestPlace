@@ -46,8 +46,8 @@ public class CrawlServlet extends HttpServlet {
             ServletContext context = request.getServletContext();
             String realPath = context.getRealPath("/");
             CrawlService crawlService = new CrawlService(hibernateSession, realPath);
-//            crawlService.crawlData(FileConstant.PASGO_INPUT_XML, FileConstant.PASGO_MAIN_XSL, FileConstant.PASGO_OUTPUT_XML, true);
-            crawlService.crawlData(FileConstant.VIETNAMM_INPUT_XML, FileConstant.VIETNAMM_MAIN_XSL, FileConstant.VIETNAMM_OUTPUT_XML ,true);
+            crawlService.crawlData(FileConstant.PASGO_INPUT_XML, FileConstant.PASGO_MAIN_XSL, FileConstant.PASGO_OUTPUT_XML, false);
+            crawlService.crawlData(FileConstant.VIETNAMM_INPUT_XML, FileConstant.VIETNAMM_MAIN_XSL, FileConstant.VIETNAMM_OUTPUT_XML ,false);
             System.out.println("End crawled");
         } finally {
             out.close();

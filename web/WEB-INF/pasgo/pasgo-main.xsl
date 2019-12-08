@@ -31,7 +31,16 @@
                     <xsl:value-of select=".//p[@class='text-address notranslate']"/>
                 </xsl:element>
                 <xsl:element name="image">
-                    <xsl:value-of select=".//img/@src"/>
+                    <xsl:variable name="data-src" select=".//img/@data-src"/>
+                    <xsl:variable name="src" select=".//img/@src"/>
+                    <xsl:choose>
+                        <xsl:when test="$data-src != ''">
+                            <xsl:value-of select="$data-src" />
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="$src" />
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </xsl:element>
             </xsl:element>
         </xsl:for-each>

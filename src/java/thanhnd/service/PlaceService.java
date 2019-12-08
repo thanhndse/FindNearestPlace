@@ -37,11 +37,10 @@ public class PlaceService {
     }
 
     public List<Place> findPlacesByCategoryAndPoints(String category, List<Point> points) {
-        double radian = 10; //in km
+        double radian = 3; //in km
         WeiszfeldCalculator weiszfeldCalculator = new WeiszfeldCalculator(points);
         Point geometricPoint = weiszfeldCalculator.getGeometricMedianPoint();
-        Category categoryObject = categoryRepository.getCategoryByName(category)
-                .orElseThrow(() -> new BadRequestException("Wrong category: " + category));
+        Category categoryObject = categoryRepository.getCategoryByName(category).orElse(null);
         List<Place> places = placeRepository.findByDistanceSmallerThanWithCategory(geometricPoint.getX(), geometricPoint.getY(), radian, categoryObject);
         
         return places;

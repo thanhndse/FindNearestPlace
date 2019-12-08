@@ -49,7 +49,7 @@ public class PlaceResource {
      * @return an instance of java.lang.String
      */
     @POST
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_XML)
     public List<Place> getPlacesByCategoryAndPoints(@QueryParam("category") String category, List<Point> points) {
         //TODO return proper representation object
         List<Place> places = placeService.findPlacesByCategoryAndPoints(category, points);

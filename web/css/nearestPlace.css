@@ -12,3 +12,30 @@ and open the template in the editor.
     background-color: white;
     border: 1px solid black;
 }
+
+.container-places{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 260px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card-image{
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+}
+.card-contain{
+  padding: 2px 16px;
+}
