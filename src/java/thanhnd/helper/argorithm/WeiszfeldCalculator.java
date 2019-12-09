@@ -34,10 +34,9 @@ public class WeiszfeldCalculator {
             double afterDistance;
             //loop until differrence about distances between 2 time is smaller than epsilon
             boolean shouldContinue;
-//            int count = 0;
+            Point pointBeforeCalculate = new Point(currentPoint.getX(), currentPoint.getY());
             do {
-//                count++;
-//                System.out.println("Loop number: " + count);
+                shouldContinue = false;
                 previousDistance = getCurrentTotalDistance();
                 double sum1X = 0;
                 double sum1Y = 0;
@@ -56,10 +55,13 @@ public class WeiszfeldCalculator {
                 }
 
                 afterDistance = getCurrentTotalDistance();
-                shouldContinue = (previousDistance - afterDistance) > epsilon;
-//                System.out.println("Previous distance: " + previousDistance);
-//                System.out.println("After distance: " + afterDistance);
-//                System.out.println("Difference: " + (previousDistance - afterDistance));
+                if (previousDistance - afterDistance < 0) {
+                    currentPoint = pointBeforeCalculate;
+                } else {
+                    if ((previousDistance - afterDistance) > epsilon){
+                        shouldContinue = true;
+                    }
+                }
             } while (shouldContinue);
             geometricMedianPoint = currentPoint;
         }

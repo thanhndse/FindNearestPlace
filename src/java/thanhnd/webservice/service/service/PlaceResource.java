@@ -50,9 +50,9 @@ public class PlaceResource {
      */
     @POST
     @Produces(MediaType.APPLICATION_XML)
-    public List<Place> getPlacesByCategoryAndPoints(@QueryParam("category") String category, List<Point> points) {
+    public List<Place> getPlacesByCategoryAndPoints(List<Point> points) {
         //TODO return proper representation object
-        List<Place> places = placeService.findPlacesByCategoryAndPoints(category, points);
+        List<Place> places = placeService.findPlacesByPoints(points);
         return places;
     }
 

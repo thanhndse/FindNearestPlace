@@ -35,16 +35,14 @@ public class Test {
 //        } catch (JSONException ex) {
 //            Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);
 //        }
-//        List<Point> points = new ArrayList<>();
-//        points.add(new Point(2, 3));
-//        points.add(new Point(2, 4));
-//        points.add(new Point(3, 2));
-//        points.add(new Point(20, 5));
-//        WeiszfeldCalculator weiszfeldCalculator = new WeiszfeldCalculator(points);
-//        System.out.println(weiszfeldCalculator.getGeometricMedianPoint().getX() + ", " + weiszfeldCalculator.getGeometricMedianPoint().getY());
+        List<Point> points = new ArrayList<>();
+        points.add(new Point(10, 6));
+        points.add(new Point(4, 5));
+        WeiszfeldCalculator weiszfeldCalculator = new WeiszfeldCalculator(points);
+        System.out.println(weiszfeldCalculator.getGeometricMedianPoint().getX() + ", " + weiszfeldCalculator.getGeometricMedianPoint().getY());
 //    
-        Point point1 = new Point(10.804402, 106.790274);
-        Point point2 = new Point(10.841226, 106.810052);
-        System.out.println(point1.calculateDistanceInReal(point2));
+//        Point point1 = new Point(10.804402, 106.790274);
+//        Point point2 = new Point(10.841226, 106.810052);
+//        System.out.println(point1.calculateDistanceInReal(point2));
     }
 }

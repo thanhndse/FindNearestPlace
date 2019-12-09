@@ -75,19 +75,10 @@ public class PlaceRepository {
         return places;
     }
 
-    public List<Place> findByDistanceSmallerThanWithCategory(double magicPointX, double magicPointY, double radius, Category category) {
+    public List<Place> findByDistanceSmallerThan(double magicPointX, double magicPointY, double radius) {
         session.beginTransaction();
-        List<Place> rawPlaces;
-        if (category == null){
-            rawPlaces = session.createQuery("from Place p")
+        List<Place> rawPlaces = session.createQuery("from Place p")
                 .getResultList();
-        }
-        else {
-            rawPlaces = session.createQuery("from Place p where :category MEMBER OF p.categories")
-                .setParameter("category", category)
-                .getResultList();
-        }
-        
         List<Place> resultPlaces = new ArrayList<>();
         Point magicPoint = new Point(magicPointX, magicPointY);
         for (Place place : rawPlaces) {

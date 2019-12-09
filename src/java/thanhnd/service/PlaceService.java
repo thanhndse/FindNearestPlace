@@ -36,13 +36,11 @@ public class PlaceService {
         return placeRepository.findAll();
     }
 
-    public List<Place> findPlacesByCategoryAndPoints(String category, List<Point> points) {
-        double radian = 1; //in km
+    public List<Place> findPlacesByPoints( List<Point> points) {
+        double radian = 0.1; //in km
         WeiszfeldCalculator weiszfeldCalculator = new WeiszfeldCalculator(points);
         Point geometricPoint = weiszfeldCalculator.getGeometricMedianPoint();
-        Category categoryObject = categoryRepository.getCategoryByName(category).orElse(null);
-        List<Place> places = placeRepository.findByDistanceSmallerThanWithCategory(geometricPoint.getX(), geometricPoint.getY(), radian, categoryObject);
-        
+        List<Place> places = placeRepository.findByDistanceSmallerThan(geometricPoint.getX(), geometricPoint.getY(), radian);
         return places;
     }
 
