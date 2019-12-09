@@ -37,7 +37,7 @@ public class PlaceService {
     }
 
     public List<Place> findPlacesByCategoryAndPoints(String category, List<Point> points) {
-        double radian = 3; //in km
+        double radian = 1; //in km
         WeiszfeldCalculator weiszfeldCalculator = new WeiszfeldCalculator(points);
         Point geometricPoint = weiszfeldCalculator.getGeometricMedianPoint();
         Category categoryObject = categoryRepository.getCategoryByName(category).orElse(null);

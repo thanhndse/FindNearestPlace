@@ -33,7 +33,7 @@ public class Category implements Serializable {
     private Integer id;
     private String name;
     
-    @ManyToMany(mappedBy = "categories", fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @ManyToMany(mappedBy = "categories", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<Place> places = new ArrayList<>();;
 
     public Category() {

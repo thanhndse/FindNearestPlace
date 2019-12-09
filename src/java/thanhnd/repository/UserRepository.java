@@ -19,8 +19,8 @@ public class UserRepository {
     
     private final Session session;
 
-    public UserRepository() {
-       session = HibernateUtil.getSessionFactory().getCurrentSession();
+    public UserRepository(Session hibernateSession) {
+        this.session = hibernateSession;
     }
 
     public User findByUsernameAndPassword(String username, String password) {

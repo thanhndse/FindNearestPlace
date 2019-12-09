@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import org.hibernate.Session;
 import thanhnd.entity.Category;
-import thanhnd.entity.User;
 import thanhnd.service.CategoryService;
 import thanhnd.service.UserService;
 import thanhnd.utils.HibernateUtil;
@@ -25,10 +24,9 @@ import thanhnd.utils.HibernateUtil;
  *
  * @author thanh
  */
-public class LoginServlet extends HttpServlet {
+public class HomeServlet extends HttpServlet {
 
-    private final String invaidPage = "invalid.html";
-    private final String dashboardPage = "dashboard.jsp";
+    private final String indexPage = "index.jsp";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,25 +40,13 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
         Session hibernateSession = HibernateUtil.getSessionFactory().openSession();
-        HttpSession session = request.getSession();
-        UserService userService = new UserService(hibernateSession);
-
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-
-        String url = invaidPage;
+        CategoryService categoryService = new CategoryService(hibernateSession);
         try {
-            User user = userService.findByUsernameAndPassword(username, password);
-            if (user != null) {
-                if (user.getRole().equals("admin")) {
-                    session.setAttribute("user", user);
-                    url = dashboardPage;
-                }
-            }
+            List<Category> categories = categoryService.getAllCategories();
+            request.setAttribute("categories", categories);
         } finally {
-            RequestDispatcher rd = request.getRequestDispatcher(url);
+            RequestDispatcher rd = request.getRequestDispatcher(indexPage);
             rd.forward(request, response);
         }
     }

@@ -5,6 +5,7 @@
  */
 package thanhnd.service;
 
+import org.hibernate.Session;
 import thanhnd.entity.User;
 import thanhnd.repository.UserRepository;
 
@@ -15,8 +16,8 @@ import thanhnd.repository.UserRepository;
 public class UserService {
     private final UserRepository userRepository;
 
-    public UserService() {
-        this.userRepository = new UserRepository();
+    public UserService(Session hibernateSession) {
+        this.userRepository = new UserRepository(hibernateSession);
     }
 
     public User findByUsernameAndPassword(String username, String password) {
