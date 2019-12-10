@@ -5,9 +5,7 @@
         <group>
             <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/web/js/nearestPlace.js</file>
             <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/web/index.jsp</file>
-            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/service/PlaceService.java</file>
-            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/repository/PlaceRepository.java</file>
-            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/src/java/thanhnd/webservice/service/service/PlaceResource.java</file>
+            <file>file:/E:/fptTerm/term_8/xml/MyAssignmentXML/FindNearestPlace/web/css/nearestPlace.css</file>
         </group>
     </open-files>
 </project-private>

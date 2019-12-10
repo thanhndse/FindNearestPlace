@@ -9,6 +9,8 @@ initMap();
 var ulChoosenCategories = document.getElementById("choosen-categories");
 var inputSearchCategory = document.getElementById('search-category');
 var ulCategoriesList = document.getElementById("categories-container");
+var isLoadAgain = false;
+var currentPlaces = [];
 
 function initialize() {
     var input = document.getElementById('pac-input');
@@ -36,6 +38,7 @@ function changePlaceListener() {
     input.value = "";
     //load address and marker
     updateAddressesAndMarker();
+    isLoadAgain = true;
 }
 
 function updateAddressesAndMarker() {
@@ -53,6 +56,13 @@ function updateAddressesAndMarker() {
         var address = addresses[i];
         addNewLiAddress(ulAddresses, address.name);
         createMarker(address.x, address.y);
+    }
+}
+function toggleCataegories() {
+    if (ulCategoriesList.style.display === "none" || ulCategoriesList.style.display === "") {
+        ulCategoriesList.style.display = "block";
+    } else {
+        ulCategoriesList.style.display = "none";
     }
 }
 
@@ -94,6 +104,7 @@ function removeAddress(e) {
         }
     }
     updateAddressesAndMarker();
+    isLoadAgain = true;
 }
 
 function clearAllAddresses() {
@@ -103,38 +114,64 @@ function clearAllAddresses() {
 
 function findPlaces() {
     toggleLoader(true);
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", '/FindNearestPlace/webresources/Places', true);
-    //Send the proper header information along with the request
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify(addresses));
-    xhr.onreadystatechange = function () { // Call a function wh
-        //en the state changes.
-        if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-            // Request finished. Do processing here.
-            data = this.responseXML;
-            toggleLoader(false);
-            if (data) {
-                console.log(data);
-                parseToList(this.responseXML);
-                renderCards();
+    if (isLoadAgain) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", '/FindNearestPlace/webresources/Places', true);
+        //Send the proper header information along with the request
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify(addresses));
+        xhr.onreadystatechange = function () { // Call a function wh
+            //en the state changes.
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+                // Request finished. Do processing here.
+                data = this.responseXML;
+                toggleLoader(false);
+                if (data) {
+                    console.log(data);
+                    parseToList(this.responseXML);
+                    isLoadAgain = false;
+                    findPlaces();
+                }
             }
         }
+    } else {
+        var liChoosenCategories = ulChoosenCategories.childNodes;
+        var choosenCategoriesList = [];
+        currentPlaces = [];
+        for (var i = 0; i < liChoosenCategories.length; i++) {
+            var textContent = liChoosenCategories[i].textContent.trim();
+            if (textContent) {
+                choosenCategoriesList.push(textContent);
+            }
+        }
+        if (choosenCategoriesList.length > 0) {
+            for (var i = 0; i < placeList.length; i++) {
+                var categories = placeList[i].categories;
+                if (hasSameElements(categories, choosenCategoriesList)) {
+                    currentPlaces.push(placeList[i]);
+                }
+            }
+        } else {
+            currentPlaces = placeList;
+        }
+
+        toggleLoader(false);
+        renderCards();
     }
 }
 function renderCards() {
     var divContainerPlace = document.getElementsByClassName("container-places")[0];
     var bodyRender = "";
-    if (placeList.length === 0) {
+    if (currentPlaces.length === 0) {
         bodyRender = "<h3>There is no places found. Please try again</h3>";
     }
-    for (var i = 0; i < placeList.length; i++) {
+    for (var i = 0; i < currentPlaces.length; i++) {
         bodyRender += "<div class='card' onClick='showDetailCard(" + i + ")' ><img src="
-                + placeList[i].image
+                + currentPlaces[i].image
                 + " alt='Avatar' class='card-image'><div class='card-contain'><h4><b>"
-                + placeList[i].name
+                + currentPlaces[i].name
                 + "</b></h4><p>"
-                + placeList[i].fullAddress
+                + currentPlaces[i].fullAddress
                 + "</p></div></div>"
     }
 
@@ -160,18 +197,19 @@ function showDetailCard(placeOrder) {
         drawGoogleRoute(placeOrder, addresses[i]);
     }
     window.scrollTo(0, 0);
+    getDistanceToAddresses(placeOrder)
 }
 
 function drawGoogleRoute(placeOrder, address) {
-    var places = data.getElementsByTagName("place");
-    var place = places[placeOrder];
+//    var places = data.getElementsByTagName("place");
+    var place = currentPlaces[placeOrder];
     var directionsService = new google.maps.DirectionsService();
     var directionsDisplay = new google.maps.DirectionsRenderer();
     directionsDisplay.setMap(map);
 
     var request = {
         origin: new google.maps.LatLng(address.x, address.y),
-        destination: new google.maps.LatLng(place.querySelector("place > latitude").innerHTML, place.querySelector("place > longitude").innerHTML),
+        destination: new google.maps.LatLng(place.latitude, place.longitude),
         travelMode: google.maps.DirectionsTravelMode.DRIVING
     };
     directionsService.route(request, function (response, status) {
@@ -217,11 +255,11 @@ function addCategoryToList(liCategory) {
     ulChoosenCategories.innerHTML += "<li>"
             + categoryText +
             " <input onclick='removeChoosenCategory(this)' type='submit' value='Remove'/> </li>";
-    ulCategoriesList.style.display = "none";
+//    ulCategoriesList.style.display = "none";
 //    inputSearchCategory.value = "";
 }
 function showCategoryList() {
-    ulCategoriesList.style.display = "block";
+//    ulCategoriesList.style.display = "block";
 }
 
 function parseToList(dataXML) {
@@ -239,21 +277,24 @@ function parseToList(dataXML) {
         for (var j = 0; j < categoriesXML.length; j++) {
             categories.push(categoriesXML[j].getElementsByTagName("name")[0].innerHTML);
         }
-        var distanceToAddresses = getDistanceToAddresses(latitude, longitude);
-        var place = {
-            name, latitude, longitude, image, fullAddress, fullAddressFormatted, categories
-        };
+        var place = {name: name, latitude: latitude, longitude: longitude, image: image, fullAddress: fullAddress, fullAddressFormatted: fullAddressFormatted, categories: categories};
         placeList.push(place);
+//        getDistanceToAddresses(latitude, longitude, place, i === placesXML.length - 1);
     }
-    console.log(placeList);
 }
 
-function getDistanceToAddresses(latitude, longitude) {
+function getDistanceToAddresses(placeOrder) {
+    var totalDistanceSpan = document.getElementById("totalDistance");
+    var standardDeviationSpan = document.getElementById("standardDeviation");
+    var place = currentPlaces[placeOrder];
     var origins = [];
+    var distanceList = [];
+    var totalDistance = 0;
+    var standardDeviation = 0;
     for (var i = 0; i < addresses.length; i++) {
         origins.push(new google.maps.LatLng(addresses[i].x, addresses[i].y));
     }
-    var destination = new google.maps.LatLng(latitude, longitude);
+    var destination = new google.maps.LatLng(place.latitude, place.longitude);
 
     var service = new google.maps.DistanceMatrixService();
     service.getDistanceMatrix(
@@ -264,23 +305,53 @@ function getDistanceToAddresses(latitude, longitude) {
                 avoidHighways: true,
                 avoidTolls: false,
             }, function (response, status) {
-                if (status !== 'OK') {
-                    alert('Error was: ' + status);
-                } else {
-                    console.log(response);
+        if (status !== 'OK') {
+            alert('Error was: ' + status);
+        } else {
+            console.log(response);
+            for (var i = 0; i < response.rows.length; i++) {
+                var element = response.rows[i].elements[0];
+                console.log("element" + element);
+                if (element.status === "OK") {
+                    var distance = {
+                        i: i, distance: element.distance.value, duration: element.duration.value
+                    };
+                    console.log("distance" + JSON.stringify(distance));
+                    distanceList.push(distance);
+                    totalDistance += element.distance.value;
                 }
+            }
+
+            console.log("distances" + JSON.stringify(distanceList));
+            console.log("total" + JSON.stringify(totalDistance));
+
+            // calculate standardDeviation
+            var sampleMean = totalDistance / addresses.length;
+            for (var i = 0; i < distanceList.length; i++) {
+                standardDeviation += (distanceList[i].distance - sampleMean) * (distanceList[i].distance - sampleMean);
+            }
+            standardDeviation = Math.sqrt((1 / (addresses.length - 1)) * standardDeviation);
+            totalDistanceSpan.innerHTML = totalDistance / 1000 + "km";
+            standardDeviationSpan.innerHTML = (standardDeviation / 1000).toFixed(2) + "km";
+            console.log("standart" + JSON.stringify(standardDeviation));
+        }
     });
 
-    function callback(response, status) {
-        // See Parsing the Results for
-        // the basics of a callback function.
-    }
+//    return {distanceList, totalDistance, standardDeviation};
 }
 
-window.addEventListener("click", function (e) {
-    var clickId = e.target.id;
-    var clickClass = e.target.className;
-    if (!(clickId === "search-category") && !(clickClass.indexOf("category-content") !== -1)) {
-        ulCategoriesList.style.display = "none";
+function hasSameElements(arr1, arr2) {
+    for (var i in arr1) {
+        if (arr2.indexOf(arr1[i]) > -1) {
+            return true;
+        }
     }
-})
+    return false;
+}
+//window.addEventListener("click", function (e) {
+//    var clickId = e.target.id;
+//    var clickClass = e.target.className;
+//    if (!(clickId === "search-category") && !(clickClass.indexOf("category-content") !== -1)) {
+//        ulCategoriesList.style.display = "none";
+//    }
+//})

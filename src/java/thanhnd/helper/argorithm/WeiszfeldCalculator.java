@@ -26,44 +26,49 @@ public class WeiszfeldCalculator {
     }
 
     public Point getGeometricMedianPoint() {
-        if (geometricMedianPoint == null) {
-            // first assign current point to the mid point
+        if (memberPoints.size() == 2) {
             currentPoint = getMidPoint();
-
-            double previousDistance;
-            double afterDistance;
-            //loop until differrence about distances between 2 time is smaller than epsilon
-            boolean shouldContinue;
-            Point pointBeforeCalculate = new Point(currentPoint.getX(), currentPoint.getY());
-            do {
-                shouldContinue = false;
-                previousDistance = getCurrentTotalDistance();
-                double sum1X = 0;
-                double sum1Y = 0;
-                double sum2 = 0;
-                for (Point memberPoint : memberPoints) {
-                    double distance = currentPoint.calculateDistance(memberPoint);
-                    if (distance == 0) {
-                        break;
-                    } else {
-                        sum2 += 1.0 / distance;
-                        sum1X += memberPoint.getX() / distance;
-                        sum1Y += memberPoint.getY() / distance;
-                        currentPoint.setX(sum1X / sum2);
-                        currentPoint.setY(sum1Y / sum2);
-                    }
-                }
-
-                afterDistance = getCurrentTotalDistance();
-                if (previousDistance - afterDistance < 0) {
-                    currentPoint = pointBeforeCalculate;
-                } else {
-                    if ((previousDistance - afterDistance) > epsilon){
-                        shouldContinue = true;
-                    }
-                }
-            } while (shouldContinue);
             geometricMedianPoint = currentPoint;
+        } else {
+            if (geometricMedianPoint == null) {
+                // first assign current point to the mid point
+                currentPoint = getMidPoint();
+
+                double previousDistance;
+                double afterDistance;
+                //loop until differrence about distances between 2 time is smaller than epsilon
+                boolean shouldContinue;
+                Point pointBeforeCalculate = new Point(currentPoint.getX(), currentPoint.getY());
+                do {
+                    shouldContinue = false;
+                    previousDistance = getCurrentTotalDistance();
+                    double sum1X = 0;
+                    double sum1Y = 0;
+                    double sum2 = 0;
+                    for (Point memberPoint : memberPoints) {
+                        double distance = currentPoint.calculateDistance(memberPoint);
+                        if (distance == 0) {
+                            break;
+                        } else {
+                            sum2 += 1.0 / distance;
+                            sum1X += memberPoint.getX() / distance;
+                            sum1Y += memberPoint.getY() / distance;
+                            currentPoint.setX(sum1X / sum2);
+                            currentPoint.setY(sum1Y / sum2);
+                        }
+                    }
+
+                    afterDistance = getCurrentTotalDistance();
+                    if (previousDistance - afterDistance < 0) {
+                        currentPoint = pointBeforeCalculate;
+                    } else {
+                        if ((previousDistance - afterDistance) > epsilon) {
+                            shouldContinue = true;
+                        }
+                    }
+                } while (shouldContinue);
+                geometricMedianPoint = currentPoint;
+            }
         }
         return geometricMedianPoint;
     }

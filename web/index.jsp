@@ -55,15 +55,14 @@
                     </div>
 
                     <div class="mt-3 mb-3">
-                        <p style="color: #007bff">Your categories</p>
+                        <span style="color: #007bff">Your categories</span> <input type="submit" value="Toggle categories" onclick="toggleCataegories()" />
                         <ul id="choosen-categories">
                         </ul>
-                        <input type="text" onfocus="showCategoryList()" class="my-input" id="search-category" onkeyup="filterCategory()" placeholder="Search for categories">
-                        <ul id="categories-container" style="display: none">
-                            <li onclick="addCategoryToList(this)" class="category-content">Tất cả</li>
+                        <input type="text" class="my-input" id="search-category" onkeyup="filterCategory()" placeholder="Search for categories">
+                        <ul id="categories-container">
                             <c:forEach var="category" items="${requestScope.categories}">
                                 <li onclick="addCategoryToList(this)" class="category-content">${category.name}</li>
-                            </c:forEach>
+                                </c:forEach>
                         </ul>
                         <button type="submit"  onclick="findPlaces()">Find places</button>
                     </div>
@@ -73,18 +72,10 @@
                 </div>
                 <div id="map" style="height: 500px; background: red; width: 55%"></div>
             </div>
+            <div class="detail-place">
+                <p style="line-height: 0; font-style: italic">Tổng khoảng cách: <span style="color: green" id="totalDistance"></span></p>
+                <p style="line-height: 1; font-style: italic">Độ lệch: <span style="color: green" id="standardDeviation"></span></p>           </div>
             <div class="container-places">
-
-                <div class="card" onclick="showCar">
-                    <img src="images/img_avatar2.png" alt="Avatar" style="width:100%" class="card-image">
-                    <div class="card-contain">
-                        <h4><b>Jane Doe</b></h4> 
-                        <p>Interior Designer</p>
-                        <p style="line-height: 0; font-style: italic">Tổng khoảng cách: <span style="color: green">15km</span></p>
-                        <p style="line-height: 1; font-style: italic">Độ lệch: <span style="color: green">2km</span></p>
-
-                    </div>
-                </div>
             </div>
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>

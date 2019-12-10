@@ -37,7 +37,7 @@ public class PlaceService {
     }
 
     public List<Place> findPlacesByPoints( List<Point> points) {
-        double radian = 0.1; //in km
+        double radian = 2; //in km
         WeiszfeldCalculator weiszfeldCalculator = new WeiszfeldCalculator(points);
         Point geometricPoint = weiszfeldCalculator.getGeometricMedianPoint();
         List<Place> places = placeRepository.findByDistanceSmallerThan(geometricPoint.getX(), geometricPoint.getY(), radian);

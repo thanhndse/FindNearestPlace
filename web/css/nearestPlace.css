@@ -40,6 +40,7 @@ and open the template in the editor.
 .card-contain{
   padding: 2px 16px;
 }
+
 .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
@@ -100,4 +101,7 @@ vertical>li{
 
 #categories-container li:hover:not(.header) {
   background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+.detail-place{
+    margin-top: 10px;
 }
